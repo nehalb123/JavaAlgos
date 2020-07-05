@@ -1,8 +1,5 @@
-package tree;
+package com.tree;
 
-import apple.laf.JRSUIUtils;
-
-import javax.transaction.TransactionRequiredException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -32,7 +29,7 @@ public class TreeOperations {
 
     static int heightOfTree(TreeNode node){
         /*
-        Height of tree = no. of edges from longest root-to-leaf path.
+        Height of com.tree = no. of edges from longest root-to-leaf path.
         In this example for 11 we get left side height 0 and right side height 2. We return the max(left side height, right side height) + 1 to
         the  node above i.e. 10
         */
@@ -107,7 +104,7 @@ public class TreeOperations {
     /* --------------------------------------------------------------- */
 
     static boolean isBST(TreeNode root, int min, int max){
-        /*If both left and right subtree return true then the binary tree is BST*/
+        /*If both left and right subtree return true then the binary com.tree is BST*/
         if(root == null){
             return true;
         }
@@ -118,7 +115,7 @@ public class TreeOperations {
     }
 
     static boolean checkBST(TreeNode root){
-        /*Another method: Inorder traversal of the BST tree is always in ascending order*/
+        /*Another method: Inorder traversal of the BST com.tree is always in ascending order*/
         int min = Integer.MIN_VALUE;
         int max = Integer.MAX_VALUE;
 
@@ -216,7 +213,7 @@ public class TreeOperations {
             /*
             * Case 2: No right subtree
             * Go to the nearest node for which given node would be in left subtree.
-            * Hint: Walk the tree from root to the node. Update successor when we go left.
+            * Hint: Walk the com.tree from root to the node. Update successor when we go left.
             **/
             TreeNode ancestor = root;
             while(ancestor!= current){
@@ -281,7 +278,7 @@ public class TreeOperations {
     }
     /* --------------------------------------------------------------- */
      /*
-     * Find width of binary tree: Refer leetcode
+     * Find width of binary com.tree: Refer leetcode
      * */
     /* --------------------------------------------------------------- */
 
@@ -308,7 +305,7 @@ public class TreeOperations {
         inOrder(root);
         int heightOfTree = heightOfTree(root);
         System.out.println("");
-        System.out.println("Height of the tree: "+heightOfTree);
+        System.out.println("Height of the com.tree: "+heightOfTree);
         System.out.println("Top View: ");
         topView(root);
         levelOrderTraversal(root);
@@ -341,7 +338,7 @@ public class TreeOperations {
         System.out.println('\n'+"Inorder successor of "+findInorderSuccessorOf+ " is: "+ inorderSucc.data );
         System.out.println("Reverse level order traversal: ");
         reverseLevelOrderTraversal(root);
-        System.out.println('\n'+"Diameter of tree: "+diameterOfBinaryTree(root));
+        System.out.println('\n'+"Diameter of com.tree: "+diameterOfBinaryTree(root));
         ArrayList path = new ArrayList();
         System.out.println("Root to leaf paths: ");
         rootToLeafPaths(root, path);
