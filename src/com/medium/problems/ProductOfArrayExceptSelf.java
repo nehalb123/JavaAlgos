@@ -1,3 +1,5 @@
+package com.medium.problems;
+
 public class ProductOfArrayExceptSelf {
 
     int[] productExceptSelf(int arr[]){

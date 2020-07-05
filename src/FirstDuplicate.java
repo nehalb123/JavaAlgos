@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 /*You are given an integer array.
 Constraint: value in the array should be > 0 && <= len
+This problem has more efficient approach with no extra space complexity.
 */
 
 public class FirstDuplicate {
@@ -19,7 +20,15 @@ public class FirstDuplicate {
     }
 
     int firstDuplicateOptimal(int arr[]){
-        //most optimal solution
+        /*
+        Constraint: value in the array should be > 0 && <= len
+        most optimal solution
+        [2,3,5,3,2]
+        [2,-3,5,3,2]
+        [2,-3,-5,3,2]
+        [2,-3,-5,3,-2]
+        [2,-3,-5,3,-2]  2nd index is already negative. Hence duplicate found.
+        */
         for(int i=0; i< arr.length; i++){
             if(arr[Math.abs(arr[i])-1] < 0){
                 return Math.abs(arr[i]);
@@ -29,6 +38,7 @@ public class FirstDuplicate {
         }
         return -1;
     }
+
     public static void main(String[] args) {
         FirstDuplicate fdup = new FirstDuplicate();
         int arr[];

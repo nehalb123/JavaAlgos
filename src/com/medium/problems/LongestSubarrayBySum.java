@@ -1,10 +1,17 @@
+package com.medium.problems;
+
 import java.util.Arrays;
 
 public class LongestSubarrayBySum {
 
     int[] longestSubArrayBySum(int sum, int arr[]){
-        /*Given a sum find the longest sub-array whose values add up to the sum;
-        the array consists of non-negative numbers*/
+        /*
+        Given a sum, find the longest sub-array whose values add up to the sum;
+        the array consists of non-negative numbers
+        Approach: Sliding window O(n)
+        The nested while loop does not make the time complexity n^2
+        because the inner loop is not dependent on the size of n. This algorithm is still linear.
+        */
         int result[] = new int[]{-1};
         int curr_sum = 0;
         int left = 0;
@@ -12,10 +19,11 @@ public class LongestSubarrayBySum {
 
         while(right < arr.length){
             curr_sum+=arr[right];
+            //reduce the sum when it exceeds and move the left pointer
             while(curr_sum > sum && left < right){
                 curr_sum -= arr[left++];
             }
-            if(curr_sum == sum && (result.length ==1 || result[1] - result[0] < right - left)){
+            if(curr_sum == sum && (result.length == 1 || result[1] - result[0] < right - left)){
                 result = new int[]{ left+1, right+1};
             }
             right++;
