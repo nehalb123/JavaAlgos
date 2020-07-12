@@ -19,6 +19,23 @@ public class FirstDuplicate {
         return -1;
     }
 
+    public int findDuplicateCycleDetection(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        int slow = nums[0], fast = nums[0];
+        while (true) {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+            if (slow == fast) {
+                fast = nums[0];
+                while (fast != slow) {
+                    slow = nums[slow];
+                    fast = nums[fast];
+                }
+                return fast;
+            }
+        }
+    }
+
     int firstDuplicateOptimal(int arr[]){
         /*
         Constraint: value in the array should be > 0 && <= len
@@ -56,9 +73,11 @@ public class FirstDuplicate {
                 arr = new int[]{1,1,2,2};
         }
         int dup = fdup.firstDuplicate(arr);
+        int dup3 = fdup.findDuplicateCycleDetection(arr);
         int dup2 = fdup.firstDuplicateOptimal(arr);
+
         System.out.println("duplicate:" + dup);
         System.out.println("duplicate:" + dup2);
-
+        System.out.println("duplicate:" + dup3);
     }
 }

@@ -31,12 +31,12 @@ public class SetMatrixZeros {
 
         if(arr[0][0] == 0){
             for (int j=0;j<arr[0].length;j++){
-                arr[0][j] = 0;
+                arr[0][j] = 0;   //set 1st row to 0
             }
         }
         if(firstCol){
             for (int i=0;i<arr.length;i++){
-                arr[i][0] = 0;
+                arr[i][0] = 0;  //set 1st col to 0
             }
         }
     }

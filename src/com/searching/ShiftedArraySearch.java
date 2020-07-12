@@ -1,7 +1,7 @@
 package com.searching;
 
 public class ShiftedArraySearch {
-
+/*Hint: Draw the continuous histogram to visualize where the pivot will be*/
     static int findPivot(int arr[]){
         int left = 0;
         int right = arr.length-1;

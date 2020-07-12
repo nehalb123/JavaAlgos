@@ -1,7 +1,9 @@
 package com.sorting;
 
 public class MergeSort {
-
+/*
+* https://imgur.com/QoWe9mI
+* */
     static void merge(int left[], int right[], int arr[]){
         int l = left.length;
         int r = right.length;
