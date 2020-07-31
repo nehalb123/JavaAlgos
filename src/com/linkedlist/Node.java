@@ -2,7 +2,7 @@ package com.linkedlist;
 
 public class Node {
     /*
-    * This class is created for RandomPointer problem. for normal implementation use
+    * This class is created for RandomPointer problem. for normal implementation use ListNode
     * */
     int val;
     Node next;

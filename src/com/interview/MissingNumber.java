@@ -1,13 +1,15 @@
 package com.interview;
 
 public class MissingNumber {
-
+    /**
+    *  Idea: The difference of the index and number will be 2 after the missing number.
+    * */
     static int findMissing(int arr[]){
         int left = 0;
         int right = arr.length-1;
         int mid;
         while(left <= right){
-            mid = left + (right-left)/2;
+            mid = left + (right-left)/2; //avoid overflows
             if(mid > 0 && arr[mid-1]-(mid-1) == 1 && arr[mid]-(mid)==2){
                 return arr[mid]-1;
             }else if(mid > 0 && arr[mid-1]-(mid-1) == 1 ){

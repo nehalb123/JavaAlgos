@@ -8,6 +8,7 @@ Input:
 
 Output:
 Return 4, and the first 4 characters of the input array should be: ["a","b","1","2"].
+a is just there once..no need to specify in the compressed array. and b is present 12 times.
 */
     public static int compress(char[] chars) {
         int len = chars.length;

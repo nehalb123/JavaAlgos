@@ -250,7 +250,7 @@ public class TreeOperations {
     /* --------------------------------------------------------------- */
 
     static int diameterOfBinaryTree(TreeNode root) {
-        /*https://imgur.com/SooBWSl*/
+        /*https://imgur.com/I2x2ZqN*/
         diameter(root);
         return diameter;
     }
@@ -339,7 +339,7 @@ public class TreeOperations {
         System.out.println('\n'+"Inorder successor of "+findInorderSuccessorOf+ " is: "+ inorderSucc.data );
         System.out.println("Reverse level order traversal: ");
         reverseLevelOrderTraversal(root);
-        System.out.println('\n'+"Diameter of com.tree: "+diameterOfBinaryTree(root));
+        System.out.println('\n'+"Diameter of tree: "+diameterOfBinaryTree(root));
         ArrayList path = new ArrayList();
         System.out.println("Root to leaf paths: ");
         rootToLeafPaths(root, path);

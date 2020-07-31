@@ -41,7 +41,7 @@ public class SimplifyUnixDirectoryPath {
     }
 
     public static void main(String[] args) {
-        String path="/a//b////c/d//././/..";
+        String path="///a//b////c/d//././/..";
         simplifyPath(path);
     }
 }

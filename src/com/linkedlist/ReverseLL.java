@@ -15,6 +15,19 @@ public class ReverseLL {
         p.next = null;
     }
 
+    static ListNode reverseLLItr(ListNode head){
+        ListNode prev = null;
+        ListNode curr = head;
+        ListNode next = null;
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+
     public static void main(String[] args) {
         nodes[0] = new ListNode(1);
         for(int i=1;i<15;i++){

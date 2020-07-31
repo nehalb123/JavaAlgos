@@ -67,6 +67,12 @@ public class KClosestToOrigin {
         int points[][] = {{-2,4},{0,-2},{-1,0},{3,5},{-2,-3},{3,2}};
         int k = 3;
         int closestKPoints[][] = kObj.kClosest(points,k);
+        for(int i=0;i<closestKPoints.length;i++){
+            for(int j=0;j<2;j++){
+                System.out.print(closestKPoints[i][j]+" ");
+            }
+            System.out.println("");
+        }
 
     }
 

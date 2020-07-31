@@ -10,6 +10,7 @@ public class ListNode {
         next = null;
     }
 
+    //adds a new node to the end of LL
     ListNode add(int data){
         return add(new ListNode(data));
     }
