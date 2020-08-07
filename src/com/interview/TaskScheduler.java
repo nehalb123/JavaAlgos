@@ -29,8 +29,8 @@ public class TaskScheduler {
     }
 
     public static void main(String[] args) {
-        char[] tasks = {'A','A','A','B','B','C'};
-        int coolDownDuration = 2;
+        char[] tasks = {'A','A','A','A', 'B','B','B','C','C','C'};
+        int coolDownDuration = 1;
         System.out.println(taskScheduler(tasks, coolDownDuration));
 
     }

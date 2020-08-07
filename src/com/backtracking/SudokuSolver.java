@@ -21,7 +21,7 @@ public class SudokuSolver {
     }
 
     static boolean isBoxSafe(int board[][], int row,int col, int num){
-        int rowStart = row - row%2;
+        int rowStart = row - row%2; //mod with the size of box
         int colStart = col - col%2;
         for(int i=rowStart;i<rowStart+2;i++){
             for(int j=colStart;j<colStart+2;j++){

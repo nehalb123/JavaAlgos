@@ -3,7 +3,7 @@ package com.numbertheory;
 public class IsPalindrome {
 
     static boolean isPalindrome(int num){
-        //Find the divisor to extract the leading digit
+        //Find the 0's required to extract the leading digit
         int divisor = 1;
         while(num/divisor >= 10){
             divisor *=10;

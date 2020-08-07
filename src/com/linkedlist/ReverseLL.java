@@ -16,6 +16,7 @@ public class ReverseLL {
     }
 
     static ListNode reverseLLItr(ListNode head){
+        //3 pointer approach
         ListNode prev = null;
         ListNode curr = head;
         ListNode next = null;

@@ -12,4 +12,6 @@
    1 4 2
    5 1 4
    Eliminate Shifting using Doubly LinkedLists
-   Optimize Search using HashMap
+   Optimize Search using HashMap<Integer,ListNode>
+
+ 2. Design LFU Cache

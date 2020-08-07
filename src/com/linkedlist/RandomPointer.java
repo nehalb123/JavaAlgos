@@ -8,11 +8,13 @@ public class RandomPointer {
     public static Node copyRandomList(Node head) {
         HashMap<Node,Node> map = new HashMap();
         Node p = head;
+        //create the nodes in a map
         while(p != null){
             map.put(p,new Node(p.val));
             p = p.next;
         }
         p = head;
+        //wiring the new nodes
         while(p != null){
             map.get(p).next = map.get(p.next);
             map.get(p).random = map.get(p.random);

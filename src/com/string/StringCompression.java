@@ -1,4 +1,4 @@
-package com.interview;
+package com.string;
 
 public class StringCompression {
 /*

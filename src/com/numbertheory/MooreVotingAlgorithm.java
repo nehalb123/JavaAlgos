@@ -33,7 +33,7 @@ public class MooreVotingAlgorithm {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2,3,4,3,7};
+        int arr[] = {2,3,4,3,7,3};
         int majorityElement = majorityElement(arr);
         System.out.println("Majority Element: "+majorityElement);
     }
