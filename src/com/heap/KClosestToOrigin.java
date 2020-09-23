@@ -1,4 +1,4 @@
-package com.medium.problems;
+package com.heap;
 
 
 import java.util.ArrayList;

@@ -1,16 +1,25 @@
 package com.string;
 
 public class KMPSubstringSearch {
-    /*  Difficulty: Easy
+    /**  Difficulty: Easy
+     *   Runtime complexity - O(m + n) where m is length of text and n is length of pattern
+     *   Space complexity - O(n)
     * */
 
+    /**
+     *  Computes an array which represents suffix which is also a prefix. The array stores index of location to start from
+     *  in case of mismatch. This helps us not to go back entirely in the text.
+     *
+     *  Is there a suffix which is also a prefix?
+     */
     static int[] computeMatchingArray(String p){
         int index = 0;
         int match[] = new int[p.length()];
         match[0] = 0;
         for(int i=1;i<p.length();){
+            //if match increment both pointers
             if(p.charAt(index) == p.charAt(i)){
-                match[i] = match[i-1]+1;
+                match[i] = index + 1;
                 index++;
                 i++;
             }else{

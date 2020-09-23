@@ -57,7 +57,7 @@ public class FirstDuplicate {
     }
 
     public static void main(String[] args) {
-        FirstDuplicate fdup = new FirstDuplicate();
+        FirstDuplicate firstDuplicate = new FirstDuplicate();
         int arr[];
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter testcase no.:");
@@ -72,9 +72,9 @@ public class FirstDuplicate {
             default:
                 arr = new int[]{1,1,2,2};
         }
-        int dup = fdup.firstDuplicate(arr);
-        int dup3 = fdup.findDuplicateCycleDetection(arr);
-        int dup2 = fdup.firstDuplicateOptimal(arr);
+        int dup = firstDuplicate.firstDuplicate(arr);
+        int dup3 = firstDuplicate.findDuplicateCycleDetection(arr);
+        int dup2 = firstDuplicate.firstDuplicateOptimal(arr);
 
         System.out.println("duplicate:" + dup);
         System.out.println("duplicate:" + dup2);

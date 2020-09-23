@@ -27,6 +27,7 @@ public class MaximizeProfit{
         int maxSell = stock[len-1];
         for (int i = len-2; i>=0 ; i--){
             profit += Integer.max(0, maxSell - stock[i]);
+            //update max every-time we encounter a greater value
             maxSell = Integer.max(stock[i],maxSell);
         }
         System.out.println("Maximum profit: "+profit);

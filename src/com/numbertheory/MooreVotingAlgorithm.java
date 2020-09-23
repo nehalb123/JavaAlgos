@@ -1,23 +1,30 @@
 package com.numbertheory;
 
 public class MooreVotingAlgorithm {
-
+    /**
+     * Given an array of size n, find the majority element.
+     * The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+     */
     static int majorityElement(int arr[]){
         int ptr = 0;
         int count = 1;
-        /*Find the candidate*/
+        /*
+        Find the candidate
+        */
         for(int i=1;i<arr.length;i++){
             if(arr[ptr]==arr[i]){
                 count++;
             }else{
                 count--;
             }
-            if(count == 0){
+            if(count == 0){  //update number when count reaches zero
                 ptr = i;
                 count = 1;
             }
         }
-        /*Check if it has majority*/
+        /*
+        Check if it is majority element
+        */
         int candidate = arr[ptr];
         int countOfCandidate = 0;
         for(int i=0;i<arr.length;i++){

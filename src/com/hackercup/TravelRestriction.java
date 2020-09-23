@@ -10,6 +10,9 @@ import java.util.Scanner;
 public class TravelRestriction {
     /**
      * https://www.facebook.com/codingcompetitions/hacker-cup/2020/qualification-round/problems/A
+     *
+     * Instead of graph, we just need an array to store the values.
+     * https://drive.google.com/file/d/1kHhWcbygTkWB8HPobtUOSaJaNkQuFkO2/view?usp=sharing
     * */
     static class Node{
         int id;

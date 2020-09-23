@@ -1,3 +1,18 @@
+Integer ~ 2 * 10^9
+Long ~ 9 * 10^18
+
+Consider for overflows in the calculations:
+mid = left + (right-left)/2;
+
+For Arrays questions:
+1. Visualize using continuous histogram
+
 When a sorted array is given things that must come to mind:
 1. Binary Search
-2. Two pointer technique
+2. Two pointer technique -> Three Sum, Container with most water.
+
+Consider using max & min functions.
+
+
+Best Trick:
+Meditate before the interview. :)

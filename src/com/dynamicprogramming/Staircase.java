@@ -1,10 +1,10 @@
-package com.medium.problems;
+package com.dynamicprogramming;
 
 public class Staircase {
     /**
-    Variation of climb staircase problem where step size and be any number from set X
+    Variation of climb staircase problem where step size can be any number from set X
     Problem Statement: Count the number of ways to reach the top of the N staircases.
-    https://imgur.com/GSTKuvs
+     https://imgur.com/C5WSii6
     */
 
     static int climbStairs(int X[], int total){

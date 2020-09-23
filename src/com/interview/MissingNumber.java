@@ -22,7 +22,7 @@ public class MissingNumber {
     }
 
     public static void main(String[] args) {
-        int arr[] = new int[]{1,  2, 3, 4, 5, 6,  8};
+        int arr[] = new int[]{1, 2, 3, 4, 5, 6, 8};
         System.out.println(findMissing(arr));
     }
 }

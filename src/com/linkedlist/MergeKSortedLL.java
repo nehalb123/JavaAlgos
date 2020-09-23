@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class MergekSortedLL {
+public class MergeKSortedLL {
 
     static ListNode mergeKLists(ListNode[] lists) {
         Queue<ListNode> q = new PriorityQueue<>((l1,l2) -> {

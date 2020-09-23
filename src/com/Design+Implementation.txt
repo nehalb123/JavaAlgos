@@ -15,3 +15,7 @@
    Optimize Search using HashMap<Integer,ListNode>
 
  2. Design LFU Cache
+
+ 3. Implement Two Stacks using an array (Easy)
+
+ 4. Implement Semaphore

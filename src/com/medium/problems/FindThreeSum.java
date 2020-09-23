@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FindThreeSum {
+    /**
+     * Given an array of n integers, are there elements a, b, c in the array such that a + b + c = 0?
+     * Find all unique triplets in the array which gives the sum of zero.
+     */
 
     static List<List<Integer>> find3Sum(int arr[]){
         List<List<Integer>> result = new ArrayList<>();
@@ -22,14 +26,15 @@ public class FindThreeSum {
                     right--;
                 }else if(threeSum < 0){
                     left++;
-                }else{
+                }else{  //if sum is zero
                     ArrayList<Integer> found = new ArrayList<>();
                     found.add(arr[i]);
                     found.add(arr[left]);
                     found.add(arr[right]);
+                    //result.add(Arrays.asList(arr[i],arr[left],arr[right])); -> much faster implementation
                     result.add(found);
                     left++;
-                    while(left < right && arr[left] == arr[left-1]){
+                    while(left < right && arr[left] == arr[left-1]){  //skip duplicate arr[left]
                         left++;
                     }
                 }

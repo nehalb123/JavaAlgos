@@ -4,9 +4,9 @@ package com.trie;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
    https://imgur.com/Jns4KG5
-   */
+ */
 public class Trie {
 
     TrieNode root;

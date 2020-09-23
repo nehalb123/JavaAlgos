@@ -2,8 +2,10 @@ package com.medium.problems;
 
 
 public class KadaneAlgorithm {
-    /*Given an array of integers, find the maximum possible sum you can get from one
-    of it's contiguous subarrays.      */
+    /**
+     * Given an array of integers, find the maximum possible sum you can get from one
+    of it's contiguous subarrays.
+     */
 
     static int maxSubArraySum(int[] arr){
         int len = arr.length;

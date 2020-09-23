@@ -37,10 +37,10 @@ public class ReverseAlternateK {
 
     public static void main(String[] args) {
         nodes[0] = new ListNode(1);
-        for(int i=1;i<15;i++){
-            nodes[i] = nodes[i-1].add(i+1);
+        for(int i=1;i<5;i++){
+            nodes[i] = nodes[0].add(i+1);
         }
-        int k = 3;
+        int k = 2;
         ListNode head = reverseAlternateKNodes(nodes[0],k);
         System.out.println(head);
     }

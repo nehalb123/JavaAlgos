@@ -3,6 +3,7 @@ package com.sorting;
 public class QuickSort {
 /*
 * https://imgur.com/NxTZkqJ
+* Time Complexity: https://imgur.com/pAluGQW
 * */
     static void swap(int arr[],int i,int j){
         int temp = arr[i];
@@ -11,9 +12,14 @@ public class QuickSort {
     }
 
     static int partition(int arr[], int start, int end){
+        /**
+         *  If the array is already sorted, the partitioning is unbalanced. This will lead to O(n^2) time complexity.
+         *  Hence a random partitioning is helpful in such a case.
+         */
         int pivot = arr[end];
         int pIndex = start;
         for(int i=start;i<end;i++){
+            //swap with a smaller number than pivot
             if(arr[i]<=pivot){
                 swap(arr,i,pIndex);
                 pIndex++;
@@ -24,6 +30,7 @@ public class QuickSort {
     }
 
     static void quickSort(int arr[],int start,int end){
+        //sorting happens by partition: When there are two elements left the array is sorted.
         if(start<end) {
             int pIndex = partition(arr,start,end);
             quickSort(arr,start,pIndex-1);
