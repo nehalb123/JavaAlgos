@@ -1,4 +1,4 @@
-package com.interview;
+package com.greedy;
 
 import java.util.Arrays;
 

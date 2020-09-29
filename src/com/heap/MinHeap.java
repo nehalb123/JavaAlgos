@@ -50,7 +50,7 @@ public class MinHeap {
 
     public int poll(){
         /**
-         * Notice we place the last element in the min element and heapify it. This is done to avoid any gaps in the heap.
+         * Notice we place the last element at the top and heapify it. This is done to avoid any gaps in the heap.
          */
         if(size == 0){
             throw new IllegalStateException();
