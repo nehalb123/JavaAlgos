@@ -323,7 +323,7 @@ public class TreeOperations {
         inOrder(root);
         int heightOfTree = heightOfTree(root);
         System.out.println("");
-        System.out.println("Height of the com.tree: " + heightOfTree);
+        System.out.println("Height of the tree: " + heightOfTree);
         System.out.println("Top View: ");
         topView(root);
         levelOrderTraversal(root);

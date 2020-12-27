@@ -7,7 +7,7 @@ public class SumOfGreatestOddDivisors {
     *https://imgur.com/kJTbfpG
     *  */
     static long square(long n) {
-        return (long)(n*n);
+        return (n*n);
     }
 
     static long sum(long n){

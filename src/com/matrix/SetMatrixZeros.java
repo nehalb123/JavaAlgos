@@ -4,39 +4,44 @@ public class SetMatrixZeros {
 
 
     static void setZeroes(int arr[][]) {
-        boolean firstCol = false;
-/*
-* Idea: Use the first row and first column as a flag. This would determine if a row or column is set to 0.
-*
-* */
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i][0] == 0){
-                firstCol = true;
+
+        /*
+        * Idea: Use the first row and first column as a flag. This would determine if a row or column is set to 0.
+        * */
+        int H = arr.length;
+        int W = arr[0].length;
+        boolean firstRowZero = false;
+        //check if first row has zero because we will mutate it later
+        for(int col=0; col < W; col++){
+            if(arr[0][col] == 0){
+                firstRowZero = true;
             }
-            for (int j = 1; j < arr[i].length; j++) {
-                if (arr[i][j] == 0) {
-                    arr[i][0] = 0;
-                    arr[0][j] = 0;
+        }
+        for(int row = 0; row < H; row++){
+            for(int col = 0; col < W; col++){
+                if(arr[row][col] == 0){
+                    arr[0][col] = 0;
                 }
             }
         }
-        for (int i=1;i<arr.length;i++) {
-            for (int j=1;j<arr[i].length;j++) {
-                if(arr[i][0] == 0 || arr[0][j]==0){
-                    arr[i][j] = 0;
+
+        for(int row = 1; row < H; row++){
+            boolean containsZero = false;
+            for(int col = 0; col< W; col++){
+                if(arr[row][col] == 0){
+                    containsZero = true;
+                    break;
                 }
-
+            }
+            for(int col = 0; col < W; col++){
+                if(containsZero || arr[0][col] == 0){
+                    arr[row][col] = 0;
+                }
             }
         }
-
-        if(arr[0][0] == 0){
-            for (int j=0;j<arr[0].length;j++){
-                arr[0][j] = 0;   //set 1st row to 0
-            }
-        }
-        if(firstCol){
-            for (int i=0;i<arr.length;i++){
-                arr[i][0] = 0;  //set 1st col to 0
+        if(firstRowZero){
+            for(int col=0; col < W; col++){
+                arr[0][col] = 0;
             }
         }
     }

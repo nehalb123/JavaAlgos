@@ -6,8 +6,8 @@ import java.util.Scanner;
 /**
  * @author Nehal Borole
  *
- * 0/1 Knapsack Problem - Given items of certain weights/values and maximum allowed weight
- * how to pick items from this set to maximize sum of value of items such that
+ * 0/1 Knapsack Problem - Given items of certain weights,values and maximum allowed weight,
+ * pick items from this set to maximize sum of value of items such that
  * sum of weights is less than or equal to maximum allowed weight.
  *
  * https://imgur.com/NxemNps

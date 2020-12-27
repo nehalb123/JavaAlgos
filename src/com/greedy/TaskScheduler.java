@@ -24,8 +24,8 @@ public class TaskScheduler {
                 break;
             }
         }
-        int idleSpaces = Math.max(0, spaces);
-        return tasks.length + idleSpaces;
+        int remainingIdleSpaces = Math.max(0, spaces);
+        return tasks.length + remainingIdleSpaces;
     }
 
     public static void main(String[] args) {

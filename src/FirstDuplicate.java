@@ -1,3 +1,4 @@
+
 import java.util.HashSet;
 import java.util.Scanner;
 /*You are given an integer array.

@@ -33,8 +33,8 @@ public class QuickSort {
         //sorting happens by partition: When there are two elements left the array is sorted.
         if(start<end) {
             int pIndex = partition(arr,start,end);
-            quickSort(arr,start,pIndex-1);
-            quickSort(arr,pIndex+1,end);
+            quickSort(arr,start,pIndex-1);  //left half
+            quickSort(arr,pIndex+1,end);  //right half
         }
     }
 
