@@ -1,6 +1,10 @@
 package com.bit;
 
 public class CountBits {
+    /**
+     * Time Complexity: O(log n)
+     * @param args
+     */
     public static void main(String[] args) {
         int num = 0b0110111;
         int count = 0;

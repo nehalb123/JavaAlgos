@@ -1,7 +1,7 @@
 package com.linkedlist;
 
 public class ReverseLL {
-    static ListNode nodes[] = new ListNode[15];
+    //static ListNode nodes[] = new ListNode[15];
     static ListNode head;
 
     static void reverseLL(ListNode p){
@@ -19,22 +19,22 @@ public class ReverseLL {
         //3 pointer approach
         ListNode prev = null;
         ListNode curr = head;
-        ListNode next = null;
+        ListNode nextPtr = null;
         while(curr!=null){
-            next = curr.next;
+            nextPtr = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = next;
+            curr = nextPtr;
         }
         return prev;
     }
 
     public static void main(String[] args) {
-        nodes[0] = new ListNode(1);
+        //nodes[0] = new ListNode(1);
+        ListNode nodes = new ListNode(1);
         for(int i=1;i<15;i++){
-            nodes[0].add(i+1);
+            nodes.add(i+1);
         }
-        reverseLL(nodes[0]);
-        System.out.println(head);
+        System.out.println(reverseLLItr(nodes));
     }
 }

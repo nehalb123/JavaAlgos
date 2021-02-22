@@ -10,8 +10,11 @@ public class MaxLengthConcatenationUnique {
      *
      *  Idea: DFS on the array of strings will give permutations -> filter longest strings with unique characters.
      *  https://imgur.com/m3AmhSC
+     *
+     *  Runtime: O(2^n)
+     *  Space: O(n) n stack frames deep in recursion
      * */
-    static int checkUnique(String s){
+    /*static int checkUnique(String s){
         int alphabet[] = new int[26];
         for(char ch: s.toCharArray()){
             if(alphabet[ch-'a'] >= 1){
@@ -37,20 +40,20 @@ public class MaxLengthConcatenationUnique {
             return;
         }
         findPermutations(arr,curr,index+1,lengthTillNow); //skip
-        findPermutations(arr,curr+arr.get(index), index+1, lengthTillNow); //select
-    }
+        findPermutations(arr,curr+arr.get(index), index+1, lengthTillNow); //select  NOTE: use StringBuffer instead of String
+    }*/
 
     /**
      * Efficient solution
-     * @param args
+     * @param arr
      */
-    /*
-    static int maxLength(List<String> arr) {
+
+    /*static int maxLength(List<String> arr) {
         List<Integer> unique = new ArrayList();
         for(String s: arr){
             int binary = toBinary(s);
             if(binary != -1){
-                unique.add(binary);
+                unique.add(binary); //add string with unique chars to the list
             }
         }
         return combine(unique,0,0);
@@ -77,8 +80,33 @@ public class MaxLengthConcatenationUnique {
             binaryForString|=setBit;
         }
         return binaryForString;
+    }*/
+
+    /**
+     * a -> has encoded binary of the string
+     * dp -> has concatenated encodings
+     * @param arr
+     * @return
+     */
+    public static int maxLength(List<String> arr) {
+        List<Integer> dp = new ArrayList<>();
+        dp.add(0);
+        int res = 0;
+        for (String s : arr) {
+            int a = 0, dup = 0;
+            for (char c : s.toCharArray()) {  //iterate over the string to check dup. chars
+                dup |= a & (1 << (c - 'a'));
+                a |= 1 << (c - 'a');
+            }
+            if (dup > 0)    continue;
+            for (int i = dp.size() - 1; i >= 0; i--) {
+                if ((dp.get(i) & a) > 0) continue;  //check if strings have unique characters
+                dp.add(dp.get(i) | a);
+                res = Math.max(res, Integer.bitCount(dp.get(i) | a));
+            }
+        }
+        return res;
     }
-    */
 
     public static void main(String[] args) {
         List<String> arr = new ArrayList<>();

@@ -6,6 +6,8 @@ public class MinHeap {
     /**
      * Implementation of Heap:
      * https://imgur.com/LPl4kwi
+     * https://imgur.com/lO9uX7i
+     * Time analysis to build a heap: https://imgur.com/GvgEXeI
      */
     private int capacity = 10;
     private int size = 0;
@@ -71,7 +73,7 @@ public class MinHeap {
 
     private void heapifyDown() {
         int index = 0;
-        while(hasLeftChild(index)){ //if the node has no left child, right child will definitely not be present
+        while(hasLeftChild(index)){ //if the node has no left child, then there is certainly no right child.
             int smallerChildIndex = getLeftChildIndex(index);
             if(hasRightChild(index) && rightChild(index) < leftChild(index)){
                 smallerChildIndex = getRightChildIndex(index);

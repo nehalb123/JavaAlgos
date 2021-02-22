@@ -77,7 +77,7 @@ public class TreeOperations {
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             System.out.print(node.data + " ");
-            if (node.left != null) {
+            if (node.left != null) {   //I missed these conditions: Be careful!!! these may result in NPE
                 queue.add(node.left);
             }
             if (node.right != null) {
@@ -338,8 +338,8 @@ public class TreeOperations {
         System.out.print("BST with deleted value " + data + ": ");
         inOrder(newRoot);
         root.insert(25);
-        levelOrderTraversal(root);
-    /*
+
+        /*
             10
           /    \
          3      11
@@ -351,6 +351,9 @@ public class TreeOperations {
                    25
 
      */
+
+        levelOrderTraversal(root);
+
         int findInorderSuccessorOf = 1;
         TreeNode inorderSucc = inorderSuccessor(root, findInorderSuccessorOf);
         System.out.println('\n' + "Inorder successor of " + findInorderSuccessorOf + " is: " + inorderSucc.data);

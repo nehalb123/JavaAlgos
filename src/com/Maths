@@ -5,6 +5,9 @@
     Right Right Down
     Down Right Right
     Right Down Right
-
+    Maths solution: We do an optimization here to avoid overflow and extra computations:
+                    (m+n)!/(m!*n!)
+                    = 1*2*...*m*(m+1)*...*(m+n)/(1*2*...*m*n!)
+                    = (m+1)*(m+2)*...*(m+n)/(1*2*...*n)
     DP solution: Reduce space from O(m*n) -> O(n)
 

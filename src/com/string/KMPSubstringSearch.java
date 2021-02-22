@@ -34,31 +34,34 @@ public class KMPSubstringSearch {
         return match;
     }
 
-    static boolean KMPSearch(String s, String p){
-        int match[] = computeMatchingArray(p);
+    static boolean KMPSearch(String string, String patten){
+        // Step 1: Compute the array
+        int match[] = computeMatchingArray(patten);
+        //Step 2: Searching begins!
         int i=0;
         int j=0;
-        while(i<s.length()){
-            if(s.charAt(i) == p.charAt(j)){
+        while(i<string.length()){
+            if(string.charAt(i) == patten.charAt(j)){
                 j++;
+                i++;
             }else{
                 if(j>0){
                     j = match[j-1];
-                    i--;
+                }else{
+                    i++;
                 }
             }
-            if(j == p.length()){
-                System.out.println("Found at index: " + (i-p.length()+1));
+            if(j == patten.length()){
+                System.out.println("Found at index: " + (i-patten.length()));
                 return true;
             }
-            i++;
         }
         return false;
     }
 
     public static void main(String[] args) {
-        String s = "abcxabcdabcdabcy";
-        String p = "abcdabcy";
-        KMPSearch(s,p);
+        String string = "abcxabcdabcdabcy";
+        String pattern = "abcdabcy";
+        KMPSearch(string, pattern);
     }
 }
