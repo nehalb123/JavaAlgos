@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class FistNonRepeatingChar {
+public class FirstNonRepeatingChar {
 
     char firstNonRepeatingCharAnother(String s){
         //solution 2
@@ -37,7 +37,7 @@ public class FistNonRepeatingChar {
     }
 
     public static void main(String[] args) {
-        FistNonRepeatingChar fnrc = new FistNonRepeatingChar();
+        FirstNonRepeatingChar fnrc = new FirstNonRepeatingChar();
         String s;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter testcase no.:");
