@@ -2,7 +2,6 @@ package com.matrix;
 
 public class SetMatrixZeros {
 
-
     static void setZeroes(int arr[][]) {
 
         /*

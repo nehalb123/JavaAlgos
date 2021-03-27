@@ -20,7 +20,7 @@ public class KadaneAlgorithm {
     }
 
     public static void main(String[] args) {
-        int arr[] = new int[]{-2,2,0,0,5,-11,6};
+        int arr[] = new int[]{-2,2,0,0,5,-11,6, 22};
         int maxSum = maxSubArraySum(arr);
         System.out.println(maxSum);
     }

@@ -2,8 +2,8 @@ package com.string;
 
 public class KMPSubstringSearch {
     /**  Difficulty: Easy
-     *   Runtime complexity - O(m + n) where m is length of text and n is length of pattern
-     *   Space complexity - O(n)
+     *   Runtime complexity - O(m + n) where m is length of text and n is length of pattern.
+     *   Space complexity - O(n) - for the prefix array.
     * */
 
     /**

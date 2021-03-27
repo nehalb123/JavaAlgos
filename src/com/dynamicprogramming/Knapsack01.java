@@ -63,9 +63,10 @@ public class Knapsack01 {
 
 /**
  Testcase:
- 4
+ 5
  7
  1 1
+ 2 1
  3 4
  4 5
  5 7

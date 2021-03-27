@@ -32,11 +32,11 @@ public class MaxLengthConcatenationUnique {
     }
 
     static void findPermutations(List<String> arr, String curr, int index, int lengthTillNow[]){
-        if(arr.size()==index && checkUnique(curr) > lengthTillNow[0]){
+        if(arr.size()==index && checkUnique(curr) > lengthTillNow[0]){   //if leaf node and valid solution
             lengthTillNow[0] = curr.length();
             return;
         }
-        if(arr.size() == index){
+        if(arr.size() == index){  //if leaf node
             return;
         }
         findPermutations(arr,curr,index+1,lengthTillNow); //skip
