@@ -6,6 +6,8 @@ package com.dynamicprogramming;
  *  2. XOR sum of all value of the array is zero.
  *
  *  Explanation: https://imgur.com/JK2xl9r
+ *
+ *  Rating: ⭐ ⭐ ⭐ ⭐ ⭐
  */
 public class NumberOfArrays {
 

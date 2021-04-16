@@ -5,6 +5,8 @@ import java.util.ArrayList;
 /**
  * Given a set of non-negative integers, and a value sum,
  * determine if there is a subset of the given set with sum equal to given sum.
+ *
+ * Rating:  ⭐ ⭐ (Easy)
  */
 public class SubsetSum {
 
@@ -54,7 +56,7 @@ public class SubsetSum {
 
     public static void main(String[] args) {
         int arr[] = {2,4,2,3};
-        int sum = 4;
+        int sum = 5;
         subsetSum(arr, sum);
     }
 }

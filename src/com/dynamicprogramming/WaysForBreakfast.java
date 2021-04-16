@@ -3,6 +3,10 @@ package com.dynamicprogramming;
 /**
  * Find the number of ways you can have breakfast in 'n' days, given
  * Bread-butter can be eaten every day, Pizza can be eaten every alternate day and Burger can be eaten every two days.
+ *
+ * Rating: ⭐ ⭐ ⭐ ⭐ ⭐
+ *
+ * https://imgur.com/gft1c0H
  */
 public class WaysForBreakfast {
 

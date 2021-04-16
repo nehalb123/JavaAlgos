@@ -1,10 +1,10 @@
 package com.arrays;
 
-
 public class KadaneAlgorithm {
     /**
+     * Rating ⭐ ⭐ ⭐ ⭐
      * Given an array of integers, find the maximum possible sum you can get from one
-    of it's contiguous subarrays.
+     * of it's contiguous sub-arrays.
      */
 
     static int maxSubArraySum(int[] arr){

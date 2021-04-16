@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-   https://imgur.com/Jns4KG5
+   Diagram: https://imgur.com/EvU8Gcy
  */
 public class Trie {
 
@@ -15,7 +15,7 @@ public class Trie {
     }
 
     static class TrieNode{
-        int terminating;
+        int terminating;  //count
         TrieNode[] trieNodes = new TrieNode[26];
 
         private TrieNode next(char ch){
