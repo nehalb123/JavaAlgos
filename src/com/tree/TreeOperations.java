@@ -1,10 +1,9 @@
 package com.tree;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import apple.laf.JRSUIUtils;
+
+import java.util.*;
 
 public class TreeOperations {
 
@@ -18,13 +17,12 @@ public class TreeOperations {
 
     static void inOrder(TreeNode root) {
         /*Depth first traversals : Inorder, pre-order and post-order*/
-        if (root.left != null) {
-            inOrder(root.left);
+        if (root == null) {
+            return;
         }
+        inOrder(root.left);
         System.out.print(root.data + " ");
-        if (root.right != null) {
-            inOrder(root.right);
-        }
+        inOrder(root.right);
     }
     /* --------------------------------------------------------------- */
 
@@ -44,27 +42,41 @@ public class TreeOperations {
     }
 
     /* --------------------------------------------------------------- */
-    static void goLeft(TreeNode node) {
-        if (node.left != null) {
-            goLeft(node.left);
-        }
-        System.out.print(node.data + " ");
-    }
 
-    static void goRight(TreeNode node) {
-        System.out.print(node.data + " ");
-        if (node.right != null) {
-            goRight(node.right);
+    static class QueueNode{
+        TreeNode node;
+        int vh; //vertical height
+        QueueNode(TreeNode node, int vh){
+            this.node = node;
+            this.vh = vh;
         }
     }
 
     static void topView(TreeNode root) {
-        if (root.left != null) {
-            goLeft(root.left);
+        Queue<QueueNode> q = new LinkedList<>();
+        Map<Integer, TreeNode> topViewMap = new TreeMap<>();
+
+        if (root == null){
+            return;
+        }else{
+            q.add(new QueueNode(root, 0));
         }
-        System.out.print(root.data + " ");
-        if (root.right != null) {
-            goRight(root.right);
+
+        while(!q.isEmpty()){
+            QueueNode temp = q.poll();
+            if(!topViewMap.containsKey(temp.vh)){
+                topViewMap.put(temp.vh, temp.node);
+            }
+
+            if(temp.node.left != null){
+                q.add(new QueueNode(temp.node.left, temp.vh-1));
+            }
+            if(temp.node.right != null){
+                q.add(new QueueNode(temp.node.right, temp.vh+1));
+            }
+        }
+        for(Map.Entry<Integer, TreeNode> entry : topViewMap.entrySet()){
+            System.out.print(entry.getValue().data + " ");
         }
     }
     /* --------------------------------------------------------------- */
@@ -127,7 +139,7 @@ public class TreeOperations {
 
     static TreeNode deleteFromBST(TreeNode root, int val) {
         if (root == null)
-            return root;
+            return null;
         else if (val < root.data) {
             //go left
             root.left = deleteFromBST(root.left, val);
@@ -265,10 +277,92 @@ public class TreeOperations {
         }
         return 0;
     }
+
+    static int diameterOfBTItr(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int diameter = 0;
+        Stack<TreeNode> nodeStack = new Stack<>();
+        Map<TreeNode, Integer> nodePathCountMap = new HashMap<>();
+        Map<TreeNode, String> direction = new HashMap<>();
+        Map<TreeNode, Integer> diameterMap = new HashMap<>();
+        nodeStack.push(root);
+        while (!nodeStack.isEmpty()) {
+            TreeNode node = nodeStack.peek();
+            if (node.left != null && !nodePathCountMap.containsKey(node.left)) {
+                nodeStack.push(node.left);
+            } else if (node.right != null && !nodePathCountMap.containsKey(node.right)) {
+                nodeStack.push(node.right);
+            } else {
+                TreeNode rootNodeEndofPostOrder = nodeStack.pop();
+                int leftMax = nodePathCountMap.getOrDefault(rootNodeEndofPostOrder.left, 0);
+                int rightMax = nodePathCountMap.getOrDefault(rootNodeEndofPostOrder.right, 0);
+                if (leftMax >= rightMax) {
+                    direction.put(rootNodeEndofPostOrder, "L");
+                } else {
+                    direction.put(rootNodeEndofPostOrder, "R");
+                }
+                int nodeMax = 1 + Math.max(leftMax, rightMax);
+                nodePathCountMap.put(rootNodeEndofPostOrder, nodeMax);
+                diameter = Math.max(diameter, leftMax + rightMax);
+                diameterMap.put(rootNodeEndofPostOrder, leftMax + rightMax);
+            }
+        }
+        //Printing Diameter
+        System.out.println("Diameter path:");
+        Stack<TreeNode> diameterPath = new Stack<>();
+        TreeNode traverse = root;
+        diameterPath.add(traverse);
+        while (!diameterPath.isEmpty()) {
+            TreeNode next;
+            TreeNode curr = diameterPath.peek();
+            if (curr.left == null && curr.right == null) {
+                int stackSize = diameterPath.size()-1;
+                for (int i = 0; i < stackSize; i++) {
+                    System.out.println(diameterPath.pop());
+                }
+                break;
+            }
+            if (direction.get(curr) == "L") {
+                next = curr.left;
+            } else {
+                next = curr.right;
+            }
+            if (next != null && diameterMap.get(next) > diameterMap.get(curr)) {
+                diameterPath.pop();
+            }
+            diameterPath.add(next);
+        }
+        TreeNode rootD = diameterPath.pop();
+        TreeNode next;
+        if (direction.get(rootD) == "L") {
+            next = rootD.right;
+        } else {
+            next = rootD.left;
+        }
+        System.out.println(rootD);
+        diameterPath.add(next);
+        while (!diameterPath.isEmpty()) {
+            TreeNode curr = diameterPath.pop();
+            System.out.println(curr);
+            if (curr.left == null && curr.right == null) {
+                break;
+            }
+            if (direction.get(curr) == "L") {
+                next = curr.left;
+            } else {
+                next = curr.right;
+            }
+            diameterPath.add(next);
+        }
+
+        return diameter;
+    }
     /* --------------------------------------------------------------- */
 
     /**
-     * What happens there when you pass the path (instead of new ArrayList(path) is that
+     * What happens there when you pass the path (instead of "new ArrayList(path)" is that
      * you use a single object in all methods call, which means that, when you return to
      * the original caller, the object is not in the same state as it was.
      */
@@ -320,6 +414,7 @@ public class TreeOperations {
         root.insert(33);
         root.insert(1);
         root.insert(20);
+        System.out.println("Inorder traversal:");
         inOrder(root);
         int heightOfTree = heightOfTree(root);
         System.out.println("");
@@ -365,6 +460,24 @@ public class TreeOperations {
         rootToLeafPaths(root, path);
 
         invertTree(root);
+
+
+        /*TreeNode root = new TreeNode(30);
+        root.insert(20);
+        root.insert(10);
+        root.insert(8);
+        root.insert(15);
+        root.insert(12);
+        root.insert(13);
+        root.insert(34);
+        root.insert(22);
+        root.insert(24);
+        root.insert(26);
+        root.insert(23);
+        root.insert(25);*/
+        //diameter not thru root
+        System.out.println('\n' + "Diameter of tree: " + diameterOfBTItr(root));
+
 
     }
 }

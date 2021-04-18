@@ -26,4 +26,8 @@ public class TreeNode {
             }
         }
     }
+
+    public String toString(){
+       return String.valueOf(data);
+    }
 }
