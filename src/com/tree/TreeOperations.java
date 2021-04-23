@@ -1,7 +1,7 @@
 package com.tree;
 
 
-import apple.laf.JRSUIUtils;
+import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
 
@@ -24,6 +24,39 @@ public class TreeOperations {
         System.out.print(root.data + " ");
         inOrder(root.right);
     }
+    /* --------------------------------------------------------------- */
+
+    static TreeNode findPredecessor(TreeNode curr){
+        TreeNode predecessor = curr.left;
+        while(predecessor.right != curr && predecessor.right!= null){
+            predecessor = predecessor.right;
+        }
+        return predecessor;
+    }
+
+    static void morrisInorderTraversal(TreeNode root) {
+        /**
+         * As we are not using stack or recursion, we need to create links to go back to the parents.
+         */
+        TreeNode curr = root;
+        while(curr != null){
+            if(curr.left == null){
+                System.out.print(curr.data + " ");
+                curr = curr.right;
+            } else{
+                TreeNode predecessor = findPredecessor(curr);
+                if(predecessor.right == null){
+                    predecessor.right = curr;
+                    curr = curr.left;
+                }else {
+                    predecessor.right = null;
+                    System.out.print(curr.data + " ");
+                    curr = curr.right;
+                }
+            }
+        }
+    }
+
     /* --------------------------------------------------------------- */
 
     static int heightOfTree(TreeNode node) {
@@ -214,6 +247,10 @@ public class TreeOperations {
     }
 
     static TreeNode inorderSuccessor(TreeNode root, int data) {
+        /**
+         * We could have simply done inorder traversal and found the next node. This would have cost O(n).
+         * However this could be done in O(h).
+         */
         TreeNode current = find(root, data);
         TreeNode successor = null;
         /*
@@ -226,7 +263,7 @@ public class TreeOperations {
             /*
              * Case 2: No right subtree
              * Go to the nearest node for which given node would be in left subtree.
-             * Hint: Walk the com.tree from root to the node. Update successor when we go left.
+             * Hint: Walk the tree from root to the node. Update successor when we go left.
              **/
             TreeNode ancestor = root;
             while (ancestor != current) {
@@ -416,6 +453,8 @@ public class TreeOperations {
         root.insert(20);
         System.out.println("Inorder traversal:");
         inOrder(root);
+        System.out.println('\n'+"Morris Inorder Traversal:");
+        morrisInorderTraversal(root);
         int heightOfTree = heightOfTree(root);
         System.out.println("");
         System.out.println("Height of the tree: " + heightOfTree);
@@ -449,9 +488,9 @@ public class TreeOperations {
 
         levelOrderTraversal(root);
 
-        int findInorderSuccessorOf = 1;
+        int findInorderSuccessorOf = 4;
         TreeNode inorderSucc = inorderSuccessor(root, findInorderSuccessorOf);
-        System.out.println('\n' + "Inorder successor of " + findInorderSuccessorOf + " is: " + inorderSucc.data);
+        System.out.println('\n' + "Inorder successor of " + findInorderSuccessorOf + " is: " + (inorderSucc != null ? inorderSucc.data : "No successor for the node"));
         System.out.println("Reverse level order traversal: ");
         reverseLevelOrderTraversal(root);
         System.out.println('\n' + "Diameter of tree: " + diameterOfBinaryTree(root));
