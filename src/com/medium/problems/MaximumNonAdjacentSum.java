@@ -1,10 +1,13 @@
 package com.medium.problems;
 
-/*
-Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence
-should be adjacent in the array. So [3, 2, 7, 10] should return 13
-https://imgur.com/Ue8QJtF
-*/
+/**
+ * Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence
+ * should be adjacent in the array. So [3, 2, 7, 10] should return 13
+ *
+ * https://imgur.com/WJO6kwJ
+ *
+ * Rating: ⭐ ⭐ ⭐ ⭐ ⭐
+ */
 public class MaximumNonAdjacentSum {
 
     static int maximumNonAdjSum(int arr[]){
@@ -13,14 +16,14 @@ public class MaximumNonAdjacentSum {
         int temp;
         for(int i = 1; i < arr.length; i++){
             temp = inc;
-            inc = Math.max(temp,exc+arr[i]);
-            exc = temp;
+            inc = exc + arr[i];
+            exc = Math.max(temp, exc);
         }
-        return inc;
+        return Math.max(inc, exc);
     }
 
     public static void main(String[] args) {
-        int arr[] = new int[]{15,5,10,100,10,5};
+        int arr[] = new int[]{3, 2, 7, 10};
         int sum = maximumNonAdjSum(arr);
         System.out.println(sum);
     }

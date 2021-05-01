@@ -20,10 +20,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
         HashSet<Character> set = new HashSet<>();
         while (right < s.length()) {
             if (!set.contains(s.charAt(right))) {
+                //unique character
                 set.add(s.charAt(right));
                 right++;
                 max = Math.max(right - left, max);
             } else {
+                //duplicate character encountered
                 set.remove(s.charAt(left++));
             }
         }

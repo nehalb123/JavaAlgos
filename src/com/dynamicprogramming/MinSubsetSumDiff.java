@@ -2,8 +2,12 @@ package com.dynamicprogramming;
 
 import java.util.ArrayList;
 
+/**
+ * Partition a set into two subsets such that the difference of subset sums is minimum.
+ *
+ * Rating: ⭐ ⭐ ⭐ ⭐ ⭐
+ */
 public class MinSubsetSumDiff {
-
 
     static void minDiff(int arr[]) {
         int sum = 0;
@@ -66,11 +70,10 @@ public class MinSubsetSumDiff {
         }
         System.out.println(subset1);
         System.out.println(subset2);
-
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, 100};
+        int arr[] = {1,6,11,5};
         minDiff(arr);
     }
 }
