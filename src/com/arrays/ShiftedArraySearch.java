@@ -1,4 +1,4 @@
-package com.searching;
+package com.arrays;
 
 public class ShiftedArraySearch {
 /**

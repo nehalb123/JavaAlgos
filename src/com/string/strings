@@ -1,0 +1,6 @@
+Time Complexity to generate all the substrings: O(n^3)
+
+String s = "abc"
+| a | b | c | : For a string of length = 3, we have 4 positions to choose from and we need two from the 4. -> 4C2
+
+Generalization: Number of substrings in a string is given by: (n+1)C(2)

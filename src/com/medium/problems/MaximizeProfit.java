@@ -16,7 +16,7 @@ Another way to the same outcome is to purchase a share in each of the 1st, 2nd a
 then sell all three shares at 5(total 3*5 =15), again total profit  of -10 + 15 = 5.
 There is no reason to purchase in the last minute as there is no time to sell.
 
-My approach: https://imgur.com/5nZbVC5
+My approach: https://imgur.com/erhCQop
 */
 
 public class MaximizeProfit{

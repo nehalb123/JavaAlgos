@@ -6,17 +6,6 @@ package com.backtracking;
  */
 public class MinimumChangeBT {
 
-    static int count2(int coins[], int amt, int i){
-        if(amt == 0){
-            return 0;
-        }
-        if(amt >= coins[i]) {
-            return Math.min(1 + count2(coins, amt - coins[i], i), count2(coins, amt, i + 1));
-        }
-
-        return Integer.MAX_VALUE-1;
-    }
-
     static int count(int coins[], int amt){
         if(amt == 0){
             return 0;
@@ -43,7 +32,5 @@ public class MinimumChangeBT {
         int coins[] = {1, 6, 5, 9};
         int amount = 11;
         countChange(coins,amount);
-        System.out.println(count2(coins, amount, 0));
-
     }
 }

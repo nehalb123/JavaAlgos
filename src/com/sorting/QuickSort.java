@@ -19,7 +19,7 @@ public class QuickSort {
         int pivot = arr[end];
         int pIndex = start;
         for(int i=start;i<end;i++){
-            //swap with a smaller number than pivot
+            //swap a smaller number than pivot with element greater than pivot on pIndex position
             if(arr[i]<=pivot){
                 swap(arr,i,pIndex);
                 pIndex++;

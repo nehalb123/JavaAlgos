@@ -332,18 +332,18 @@ public class TreeOperations {
             } else if (node.right != null && !nodePathCountMap.containsKey(node.right)) {
                 nodeStack.push(node.right);
             } else {
-                TreeNode rootNodeEndofPostOrder = nodeStack.pop();
-                int leftMax = nodePathCountMap.getOrDefault(rootNodeEndofPostOrder.left, 0);
-                int rightMax = nodePathCountMap.getOrDefault(rootNodeEndofPostOrder.right, 0);
+                TreeNode rootNodeEndOfPostOrder = nodeStack.pop();
+                int leftMax = nodePathCountMap.getOrDefault(rootNodeEndOfPostOrder.left, 0);
+                int rightMax = nodePathCountMap.getOrDefault(rootNodeEndOfPostOrder.right, 0);
                 if (leftMax >= rightMax) {
-                    direction.put(rootNodeEndofPostOrder, "L");
+                    direction.put(rootNodeEndOfPostOrder, "L");
                 } else {
-                    direction.put(rootNodeEndofPostOrder, "R");
+                    direction.put(rootNodeEndOfPostOrder, "R");
                 }
                 int nodeMax = 1 + Math.max(leftMax, rightMax);
-                nodePathCountMap.put(rootNodeEndofPostOrder, nodeMax);
+                nodePathCountMap.put(rootNodeEndOfPostOrder, nodeMax);
                 diameter = Math.max(diameter, leftMax + rightMax);
-                diameterMap.put(rootNodeEndofPostOrder, leftMax + rightMax);
+                diameterMap.put(rootNodeEndOfPostOrder, leftMax + rightMax);
             }
         }
         //Printing Diameter

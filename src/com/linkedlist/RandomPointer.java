@@ -2,6 +2,11 @@ package com.linkedlist;
 
 import java.util.HashMap;
 
+/**
+ * Problem Statement: Copy List with Random Pointer
+ *
+ * Space complexity: O(n) intuitive if figured out how links can be retrieved.
+ */
 public class RandomPointer {
     static Node nodes[] = new Node[4];
 

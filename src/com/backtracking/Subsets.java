@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Subsets {
     /**
+     * Problem Statement: Generate all possible subsets of an array.
      * Hint: Draw the tree to understand the solution
      */
     static List<List<Integer>> subsets = new ArrayList<>();
