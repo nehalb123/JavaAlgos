@@ -2,6 +2,8 @@ package com.arrays;
 
 public class ShiftedArraySearch {
 /**
+ * Problem Statement: Search an element in a sorted but rotated array.
+ *
  * Hint: Draw the continuous histogram to visualize where the pivot will be
  * */
     static int findPivot(int arr[]){

@@ -1,4 +1,4 @@
-package com.numbertheory;
+package com.math;
 
 public class ReverseInteger {
 

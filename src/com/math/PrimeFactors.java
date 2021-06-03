@@ -1,4 +1,4 @@
-package com.numbertheory;
+package com.math;
 
 import java.util.ArrayList;
 

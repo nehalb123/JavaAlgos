@@ -7,9 +7,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     /**
      * Visual aid: https://imgur.com/BqU3Ema
-     *
-     * @param s
-     * @return
      */
 
     static int longestSubstring(String s) {

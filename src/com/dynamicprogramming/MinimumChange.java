@@ -1,5 +1,15 @@
 package com.dynamicprogramming;
 
+
+/**
+ * Problem Statement: Given a sum and unlimited supply of coins of certain denomination, find minimum change
+ * that can form the sum.
+ * Sum = 11
+ * C = {1,2,5}
+ * Change = 3
+ *
+ * https://imgur.com/XrQZXVN
+ */
 public class MinimumChange {
 
     static void print(int dp[][], int rows, int cols){
@@ -34,9 +44,11 @@ public class MinimumChange {
         int len = coins.length;
         int dp[][] = new int[len+1][N+1];
 
+        //Sum of 0 can be made by choosing 0 coins
         for(int i = 0; i < dp.length; i++){
             dp[i][0] = 0;
         }
+        //A coin of 0 denomination can't be used to make sum>=1.
         for(int j=1; j < dp[0].length; j++){
             dp[0][j] = Integer.MAX_VALUE-1;
         }

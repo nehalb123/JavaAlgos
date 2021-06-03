@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Given an array of integers, find out a subarray from the given array which starts and ends in a prime number and which
- * has minimum count of -ve numbers in it.
+ * has minimum count of -ve numbers in it. If two sub-arrays have the same number of -ve numbers in them, print the largest one.
  */
 public class LargestSubArrayWithPrimes {
 
@@ -47,6 +47,7 @@ public class LargestSubArrayWithPrimes {
         int start = 0, end = 1, minNegNumbers = n, ans = 1, negNumbers, subArraySize;
 
         while(start < end){
+            end = start+1;
             while(end < primesIndex.size()){
                 negNumbers = prefixArr[primesIndex.get(end)] - prefixArr[primesIndex.get(start)];
                 subArraySize = primesIndex.get(end) - primesIndex.get(start)+1;
@@ -60,12 +61,9 @@ public class LargestSubArrayWithPrimes {
                 }else {
                     ans = Math.max(ans, subArraySize);
                 }
-
                 System.out.println(arr[primesIndex.get(start)] + " " + arr[primesIndex.get(end)] + " " + negNumbers);
                 end++;
             }
-            if(end == primesIndex.size())
-                end--;
 
             start++;
         }

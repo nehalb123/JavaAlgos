@@ -7,6 +7,8 @@ public class Subsets {
     /**
      * Problem Statement: Generate all possible subsets of an array.
      * Hint: Draw the tree to understand the solution
+     *
+     * https://imgur.com/41X3KpP
      */
     static List<List<Integer>> subsets = new ArrayList<>();
 
