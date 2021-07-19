@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class Alchemy {
     /**
      * https://www.facebook.com/codingcompetitions/hacker-cup/2020/qualification-round/problems/B
+     *
+     * This is a very bad solution.
+     * Best solution: Count the char 'A' and 'B', the diff of their counts should be 1
      * */
     static HashMap<String, String> reduced = new HashMap<>();
 

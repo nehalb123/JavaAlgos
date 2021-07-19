@@ -21,9 +21,11 @@ public class LongestPalindromicSubstring {
         String res = "";
         int L = 0;
         int R = 0;
+        //fill diagonal i.e. len = 1 substring
         for(int i = 0; i < len; i++){
             dp[i][i] = 1;
         }
+        //fill for len = 2 substring
         for(int i = 0; i < len-1; i++){
             if(s.charAt(i) == s.charAt(i+1)){
                 dp[i][i+1] = 1;

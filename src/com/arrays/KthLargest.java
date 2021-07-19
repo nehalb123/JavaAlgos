@@ -9,7 +9,11 @@ import java.util.Random;
  * QuickSelect was giving me 16ms runtime on LC.
  * Randomizing the array resulted in 2ms runtime.
  *
+ * https://imgur.com/a/bdrG4Lm
+ *
  * Time Complexity: O(n) avg case
+ *
+ * Worst case: O(n^2)
  */
 public class KthLargest {
 
@@ -27,6 +31,7 @@ public class KthLargest {
                 swap(arr,i,pIndex);
                 pIndex++;
             }
+            //pIndex points to a number larger than pivot
         }
         swap(arr,pIndex,end);
         return pIndex;

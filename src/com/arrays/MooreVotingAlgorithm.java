@@ -1,4 +1,4 @@
-package com.math;
+package com.arrays;
 
 public class MooreVotingAlgorithm {
     /**

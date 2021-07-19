@@ -30,7 +30,7 @@ public class QuickSort {
     }
 
     static void quickSort(int arr[],int start,int end){
-        //sorting happens by partition: When there are two elements left the array is sorted.
+        //sorting happens by partition: When there are two elements left, the array is sorted.
         if(start<end) {
             int pIndex = partition(arr,start,end);
             quickSort(arr,start,pIndex-1);  //left half

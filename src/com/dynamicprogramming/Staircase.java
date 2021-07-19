@@ -2,9 +2,11 @@ package com.dynamicprogramming;
 
 public class Staircase {
     /**
-    Variation of climb staircase problem where step size can be any number from set X
-    Problem Statement: Count the number of ways to reach the top of the N staircases.
-     https://imgur.com/C5WSii6
+     * Variation of climb staircase problem where step size can be any number from set X
+     * Problem Statement: Count the number of ways to reach the top of the N staircases.
+     *
+     * https://imgur.com/ZelAzMn
+     *
     */
 
     static int climbStairs(int X[], int total){
@@ -26,7 +28,7 @@ public class Staircase {
 
     public static void main(String[] args) {
         int totalStairs = 5;
-        int X[] = {1,3,5};
+        int X[] = {1,2,3};
         int waysToReachTop = climbStairs(X, totalStairs);
         System.out.println("Ways to reach the top: "+waysToReachTop);
     }

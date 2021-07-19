@@ -10,7 +10,7 @@ public class KMPSubstringSearch {
      *  Computes an array which represents suffix which is also a prefix. The array stores index of location to start from
      *  in case of mismatch. This helps us not to go back entirely in the text.
      *
-     *  Is there a suffix which is also a prefix?
+     *  Is there a suffix which is also a prefix in the pattern string?
      */
     static int[] computeMatchingArray(String p){
         int index = 0;

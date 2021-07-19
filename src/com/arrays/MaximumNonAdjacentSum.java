@@ -1,4 +1,4 @@
-package com.medium.problems;
+package com.arrays;
 
 /**
  * Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence

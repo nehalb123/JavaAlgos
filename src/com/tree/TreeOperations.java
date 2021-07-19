@@ -407,7 +407,7 @@ public class TreeOperations {
         if (node == null)
             return;
         path.add(node.data);
-        if (node.left == null && node.right == null) {
+        if (node.left == null && node.right == null) {  //leaf node found
             System.out.println(path);
             return;
         }
