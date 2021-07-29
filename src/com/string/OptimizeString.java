@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class OptimizeString {
     /**
-     * Goldman
+     * Goldman Sachs
      * The question states optimize input in such a way that repeating pattern is replaced with "*"
      * Example :
      * input - "ABABCABABCD"
