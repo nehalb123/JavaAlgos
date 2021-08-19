@@ -29,6 +29,7 @@ public class FirstNonRepeatingChar {
                 char_counts.put(c,1);
             }
         }
+        //traverse again to get the first non repeating
         for(int i=0;i<s.length();i++){
             char c = s.charAt(i);
             if(char_counts.get(c) == 1) return c;

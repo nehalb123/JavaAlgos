@@ -2,6 +2,9 @@ package com.math;
 
 import java.util.ArrayList;
 
+/**
+ * Find the prime factors of a number.
+ */
 public class PrimeFactors {
 
     static void primeFactors(int num){
