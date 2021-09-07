@@ -11,6 +11,15 @@ package com.dynamicprogramming;
  */
 public class NumberOfArrays {
 
+    static void print(int dp[][], int rows, int cols){
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(dp[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     static void countArrays(int N){
         int dp[][] = new int[N+1][8];
         dp[0][0] = 1;
@@ -19,6 +28,11 @@ public class NumberOfArrays {
                 // k is XOR-sum of previously calculated number of arrays of length i-1.
                 for(int k=0;k < 8;k++){
                     // x is a number we append to arrays of length i-1 so XOR-sum is j.
+                    /**
+                     * number ^ prevSum = currSum,
+                     * By XOR prevSum on both sides we get,
+                     *  number = currSum ^ prevSum
+                     * **/
                     int x = j ^ k;
                     if(x <= 5){
                         dp[i][j] += dp[i-1][k];
@@ -28,6 +42,7 @@ public class NumberOfArrays {
         }
 
         System.out.println("Total arrays possible: " + dp[N][0]);
+        print(dp, N+1, 8);
     }
 
     public static void main(String[] args) {

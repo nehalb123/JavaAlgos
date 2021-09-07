@@ -1,8 +1,7 @@
-package com.medium.problems;
+package com.arrays;
 
 import java.util.Scanner;
-/*
-LOYLOGIC INTERVIEW QUESTION
+/**
 Algorithms have become so good at predicting the market that you know the share price of a
 company(PSV) will be for a number of minutes going forward. \r\n###
 Each minute, your high frequency trading platform allows you to either buy one share of PSV,

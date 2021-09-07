@@ -2,9 +2,10 @@ package com.arrays;
 
 import java.util.HashSet;
 import java.util.Scanner;
-/*You are given an integer array.
-Constraint: value in the array should be > 0 && <= len
-This problem has more efficient approach with no extra space complexity.
+/**
+ * You are given an integer array.
+ * Constraint: value in the array should be > 0 && <= len.
+ * This problem has more efficient approach with no extra space complexity.
 */
 
 public class FirstDuplicate {

@@ -14,8 +14,8 @@ import static java.util.stream.Collectors.toList;
  * There are a number of plants in a garden. Each of the plants has been treated with some amount of pesticide.
  * After each day, if any plant has more pesticide than the plant on its left, being weaker than the left one, it dies.
  *
- * You are given the initial values of the pesticide in each of the plants. Determine the number of days after which no plant dies,
- * i.e. the time after which there is no plant with more pesticide content than the plant to its left.
+ * You are given the initial values of the pesticide in each of the plants. Determine the number of days after which no
+ * plant dies, i.e. the time after which there is no plant with more pesticide content than the plant to its left.
  */
 public class PoisonousPlants {
 

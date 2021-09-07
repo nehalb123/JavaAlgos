@@ -12,7 +12,7 @@ public class SieveOfEratosthenes {
         }
         for(int p = 2; p*p <= n; p++){
             if(isPrime[p] == true){
-                for(int i=p*p; i <= n; i += p){
+                for(int i=p*p; i <= n; i += p){  /** Mark multiples of p as 'false' **/
                     isPrime[i] = false;
                 }
             }

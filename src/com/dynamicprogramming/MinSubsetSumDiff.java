@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Partition a set into two subsets such that the difference of subset sums is minimum.
- *
+ * TODO : Diagram?
  * Rating: ⭐ ⭐ ⭐ ⭐ ⭐
  */
 public class MinSubsetSumDiff {

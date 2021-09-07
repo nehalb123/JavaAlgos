@@ -5,6 +5,10 @@ public class ListNode {
     int data;
     ListNode next;
 
+    ListNode(){
+        next = null;
+    }
+
     ListNode(int data){
         this.data = data;
         next = null;

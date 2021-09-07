@@ -6,6 +6,7 @@ mid = left + (right-left)/2;
 
 For Arrays questions:
 1. Visualize using continuous histogram
+2. Use index as implicit counter
 
 When a sorted array is given things that must come to mind:
 1. Binary Search

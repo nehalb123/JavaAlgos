@@ -1,5 +1,5 @@
-1.  Unique Paths Leetcode : How many different ways you pick m-1 rights or n-1 downs in a total of (m-1 + n-1) steps in the path,
-    which you can easily calculate using the combinatorics formula p!/(a! b!).
+1.  Unique Paths Leetcode : How many different ways you pick m-1 rights or n-1 downs in a total of (m-1 + n-1) steps in
+    the path, which you can easily calculate using the combinatorics formula p!/(a! b!).
     m=3 n=2
     Therefore, jumps = 3
     Right Right Down

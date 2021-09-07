@@ -17,8 +17,10 @@ public class GeneratePermutations {
             if(visited[i] == true) continue;
             curr.add(nums[i]);
             visited[i] = true;
+            System.out.println("Choose: " + curr + " Index: " + i);
             backtrack(nums, res, curr, visited);
             curr.remove(curr.size()-1);
+            System.out.println("After: " + curr + " Index: " + i);
             visited[i] = false;
         }
     }

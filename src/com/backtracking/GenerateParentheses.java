@@ -39,8 +39,9 @@ public class GenerateParentheses {
 
 /**
  * Printing all combinations:
- * The goal is to print a string of “(“ ,”)” in certain order. The length of string is 2n. The constraints are that “(“s need to match “)”s.
- * Without constraints, we just simply print out “(“ or “)” until length hits n. So the base case will be length ==2 n, recursive case is print out “(“ and “)”. The code will look like
+ * The goal is to print a string of “(“ ,”)” in certain order. The length of string is 2n. The constraints are that “(“s
+ * need to match “)”s. Without constraints, we just simply print out “(“ or “)” until length hits n. So the base case
+ * will be length ==2 n, recursive case is print out “(“ and “)”. The code will look like
  *
  * //base case
  * if(string length == 2*n) {
