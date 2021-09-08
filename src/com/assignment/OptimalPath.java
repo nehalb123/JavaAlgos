@@ -37,6 +37,7 @@ class Point{
         this.x = x;
         this.y = y;
         this.z = z;
+        /** dist is the cost **/
         this.dist = dist;
     }
 
@@ -55,12 +56,7 @@ class Point{
 
     @Override
     public String toString() {
-        return "Point{" +
-                "x=" + x +
-                ", y=" + y +
-                ", z=" + z +
-                ", dist=" + dist +
-                '}';
+        return x + " " + y + " " + z + " " + dist + "\n";
     }
 }
 
@@ -122,9 +118,8 @@ public class OptimalPath {
         }
     }
 
-    static void bfsOptimal(Cave c){
+    static void bfs(Cave c){
         int nx, ny, nz;
-        /*Queue<Point> q = new LinkedList<>();*/
         Queue<List<Point>> q = new LinkedList<>();
         boolean visited[][][] = new boolean[c.x][c.y][c.z];
         List<Point> temp = new ArrayList<>();
@@ -135,23 +130,27 @@ public class OptimalPath {
         List<Point> pathList;
         while(!q.isEmpty()){
             pathList = q.poll();
+            //get the recently inserted node
             pt = pathList.get(pathList.size()-1);
             //check if goal reached
             if(pt.x == c.end_x && pt.y == c.end_y && pt.z == c.end_z){
-                System.out.println("Path:" + pathList);
-                int cost = 0;
+                int totalCost = 0;
                 for(int i=0; i<pathList.size(); i++){
-                    cost += pathList.get(i).dist;
+                    totalCost += pathList.get(i).dist;
                 }
-                System.out.println("Least Cost: "+ cost);
+                System.out.println(totalCost);
+                System.out.println(pathList.size());
+                for(Point p : pathList){
+                    System.out.println(p.x + " " + p.y + " " + p.z + " " + p.dist);
+                }
                 return;
             }
-
             //visit neighbors
             for(int i = 0; i < c.grid.get(pt).size(); i++){
-                nx = pt.x + move_x[c.grid.get(pt).get(i)-1];
-                ny = pt.y + move_y[c.grid.get(pt).get(i)-1];
-                nz = pt.z + move_z[c.grid.get(pt).get(i)-1];
+                int action = c.grid.get(pt).get(i)-1;
+                nx = pt.x + move_x[action];
+                ny = pt.y + move_y[action];
+                nz = pt.z + move_z[action];
 
                 if(isInside(nx,ny,nz, c) && !visited[nx][ny][nz]){  //and not visited
                     visited[nx][ny][nz] = true;
@@ -160,12 +159,62 @@ public class OptimalPath {
                     tempPathList.add(p);
                     q.add(tempPathList);
                 }
-
             }
         }
-
         System.out.println("FAIL");
 
+    }
+
+    static void uniformCostSearch(Cave c){
+        int nx, ny, nz;
+        PriorityQueue<List<Point>> q = new PriorityQueue<>((l1, l2) -> l1.get(l1.size() -1).dist - l2.get(l2.size()-1).dist);
+        boolean visited[][][] = new boolean[c.x][c.y][c.z];
+        List<Point> temp = new ArrayList<>();
+        temp.add(new Point(c.start_x, c.start_y, c.start_z, 0));
+        q.add(temp);
+        Point pt;
+        visited[c.start_x][c.start_y][c.start_z] = true;
+        List<Point> pathList;
+
+        while(!q.isEmpty()){
+            pathList = q.poll();
+            //get the recently inserted node
+            pt = pathList.get(pathList.size()-1);
+            int pt_x = pt.x, pt_y = pt.y, pt_z = pt.z;
+            visited[pt_x][pt_y][pt_z] = true;
+            //check if goal reached
+            if(pt.x == c.end_x && pt.y == c.end_y && pt.z == c.end_z){
+                int totalCost = 0;
+                for(int i=0; i<pathList.size(); i++){
+                    totalCost += pathList.get(i).dist;
+                }
+                System.out.println(totalCost);
+                System.out.println(pathList.size());
+                for(Point p : pathList){
+                    System.out.println(p.x + " " + p.y + " " + p.z + " " + p.dist);
+                }
+                return;
+            }
+
+            //visit neighbors
+            for(int i = 0; i < c.grid.get(pt).size(); i++){
+                int action = c.grid.get(pt).get(i)-1;
+                nx = pt.x + move_x[action];
+                ny = pt.y + move_y[action];
+                nz = pt.z + move_z[action];
+
+                int costOfAction = (action > 5) ? 14 : 10;  //if diagonal cost:14 else cost:10
+
+                if(isInside(nx,ny,nz, c) && !visited[nx][ny][nz]){  //and not visited
+                    /*visited[nx][ny][nz] = true;*/
+                    Point p = new Point(nx, ny, nz , costOfAction);
+                    List<Point> tempPathList = new ArrayList<>(pathList);
+                    tempPathList.add(p);
+                    q.add(tempPathList);
+                }
+            }
+        }
+        System.out.println("FAIL");
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -180,8 +229,10 @@ public class OptimalPath {
         parseInput(c);
         switch(type){
             case "BFS":
-                bfsOptimal(c);
+                bfs(c);
+                break;
+            case "UCS":
+                uniformCostSearch(c);
         }
-
     }
 }
