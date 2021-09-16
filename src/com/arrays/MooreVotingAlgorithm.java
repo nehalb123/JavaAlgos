@@ -4,6 +4,12 @@ public class MooreVotingAlgorithm {
     /**
      * Given an array of size n, find the majority element.
      * The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+     *
+     * Approach 1:
+     * 1. Find median by sorting the array
+     *
+     * Approach 2:
+     * 1. Use Moore's voting algorithm.
      */
     static int majorityElement(int arr[]){
         int ptr = 0;

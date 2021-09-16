@@ -151,7 +151,7 @@ public class TreeOperations {
     /* --------------------------------------------------------------- */
 
     static boolean isBST(TreeNode root, int min, int max) {
-        /*If both left and right subtree return true then the binary com.tree is BST*/
+        /*If both left and right subtree return true then the binary tree is BST*/
         if (root == null) {
             return true;
         }
@@ -430,6 +430,17 @@ public class TreeOperations {
         node.right = invertTree(root.left);
         return node;
     }
+
+    /* --------------------------------------------------------------- */
+
+    public static TreeNode constructBTFromInorderAndPreorder(){
+        TreeNode node = null;
+
+        return node;
+    }
+
+
+    /* --------------------------------------------------------------- */
 
     public static void main(String[] args) {
 

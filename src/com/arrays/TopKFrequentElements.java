@@ -5,11 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://imgur.com/cn7XLID
+ * Diagram: https://imgur.com/cn7XLID
  *
  * Read LC Solution
  */
 public class TopKFrequentElements {
+
     static int[] unique;
     static Map<Integer, Integer> count;
 
@@ -20,7 +21,7 @@ public class TopKFrequentElements {
     }
 
     static int partition(int start, int end){
-        int pivot = count.get(unique[end]);
+        int pivot = count.get(unique[end]); //freq of end
         int pIndex = start;
         for(int i=start;i < end;i++){
             if(count.get(unique[i])<=pivot){

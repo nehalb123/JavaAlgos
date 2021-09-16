@@ -1,7 +1,7 @@
 package com.sorting;
 
 public class QuickSort {
-/*
+/**
 * https://imgur.com/NxTZkqJ
 * Time Complexity: https://imgur.com/pAluGQW
 * */
@@ -24,6 +24,7 @@ public class QuickSort {
                 swap(arr,i,pIndex);
                 pIndex++;
             }
+            //pIndex points to the larger element
         }
         swap(arr,pIndex,end);
         return pIndex;
