@@ -1,5 +1,8 @@
 package com.backtracking;
 
+/**
+ * Replace 0 with number.
+ */
 public class SudokuSolver {
 
     static boolean isRowSafe(int board[][], int row, int num){
@@ -57,7 +60,7 @@ public class SudokuSolver {
         boolean isEmpty = false;
         for(int i=0;i<board.length;i++){
             for(int j=0;j<board[0].length;j++){
-                if(board[i][j] == 0){
+                if(board[i][j] == 0){  //find empty cell
                     isEmpty = true;
                     row = i;
                     col = j;

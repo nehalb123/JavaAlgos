@@ -10,6 +10,9 @@ import java.util.Random;
  * Randomizing the array resulted in 2ms runtime.
  *
  * https://imgur.com/a/bdrG4Lm
+ * Approach:
+ * 1.   Store in a min-heap
+ * 2.   QuickSelect
  *
  * Time Complexity: O(n) avg case
  *

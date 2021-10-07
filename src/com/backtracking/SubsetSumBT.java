@@ -25,12 +25,12 @@ public class SubsetSumBT {
 
     static void subsetSum(int[] arr) {
         List<Integer> res = new ArrayList<>();
-        backtrack(arr, 0, 25, res);
+        backtrack(arr, 0, 5, res);
         System.out.println(subset);
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, 3, 4, 7, 8};
+        int arr[] = {2, 3, 2, 4};
         List<Integer> set = Arrays.stream(arr).boxed().collect(Collectors.toList());
         subsetSum(arr);
     }

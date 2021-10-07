@@ -403,6 +403,20 @@ public class TreeOperations {
      * you use a single object in all methods call, which means that, when you return to
      * the original caller, the object is not in the same state as it was.
      */
+    /*
+                    2 [2]
+                   / \
+                  /   \
+                 /     \
+        [2,1]   1       3  [2,3]
+               / \     / \
+              0   7   9   1  [2,3,1]
+             /   / \     / \
+            2   1   0   8   8 [2,3,1,8]
+                   /
+                  7 [2,1,7,0,7]
+     */
+
     static void rootToLeafPaths(TreeNode node, ArrayList path) {
         if (node == null)
             return;

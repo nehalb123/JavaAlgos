@@ -3,7 +3,7 @@ package com.string;
 /**
  * Levenshtein distance
  * Reference: https://algodaily.com/challenges/levenshtein-edit-distance
- * 72. Edit Distance
+ * 72. Edit Distance: DP + String
  */
 public class EditDistances {
 

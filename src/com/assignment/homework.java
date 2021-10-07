@@ -290,7 +290,7 @@ public class homework {
 
     public static void main(String[] args) throws FileNotFoundException {
         final String BASE_PATH = "/Users/nehalborole/USC/USC-coursework/AI/input";
-        File input = new File(BASE_PATH + "/input.txt");
+        File input = new File(BASE_PATH + "/myinput.txt");
         sc = new Scanner(input);
         File output = new File(BASE_PATH + "/output.txt");
         PrintStream stream = new PrintStream(output);

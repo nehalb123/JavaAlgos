@@ -2,7 +2,7 @@ package com.sorting;
 
 public class MergeSort {
     /**
-     * https://imgur.com/QoWe9mI
+     * Diagram: https://imgur.com/QoWe9mI
      * */
     static void merge(int left[], int right[], int arr[]) {
         int l = left.length;
@@ -33,14 +33,17 @@ public class MergeSort {
         int mid = len / 2;
         int left[] = new int[mid];
         int right[] = new int[len - mid];
+        //divide
         for (int i = 0; i < mid; i++) {
             left[i] = arr[i];
         }
         for (int j = mid; j < len; j++) {
             right[j - mid] = arr[j];
         }
+        //conquer
         mergeSort(left);
         mergeSort(right);
+        //combine
         merge(left, right, arr);
     }
 

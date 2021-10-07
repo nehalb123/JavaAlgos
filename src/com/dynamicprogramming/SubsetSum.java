@@ -32,7 +32,7 @@ public class SubsetSum {
         }
         for (int i = 1; i < rows; i++) {
             for (int j = 1; j < cols; j++) {
-                if (dp[i - 1][j] || j - arr[i - 1] >= 0 && dp[i - 1][j - arr[i - 1]]) {
+                if (dp[i - 1][j] || (j - arr[i - 1] >= 0 && dp[i - 1][j - arr[i - 1]])) {
                     dp[i][j] = true;
                 } else {
                     dp[i][j] = false;

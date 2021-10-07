@@ -3,9 +3,6 @@ package com.math;
 public class GCD {
     /**
      * gcd(0,0) = undefined
-     * @param a
-     * @param b
-     * @return
      */
     static int findGCD(int a, int b){
         if(b == 0)
