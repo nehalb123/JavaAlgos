@@ -2,6 +2,7 @@ package com.dynamicprogramming;
 
 
 /**
+ * 322. Coin Change
  * Problem Statement: Given a sum and unlimited supply of coins of certain denomination, find minimum change
  * that can form the sum.
  * Sum = 11
@@ -10,7 +11,7 @@ package com.dynamicprogramming;
  *
  * https://imgur.com/XrQZXVN
  */
-public class MinimumChange {
+public class MinimumCoinChange {
 
     static void print(int dp[][], int rows, int cols){
         for (int i = 0; i < rows; i++) {
@@ -62,7 +63,6 @@ public class MinimumChange {
                 }
             }
         }
-
         print(dp, len+1, N+1);
         System.out.println("No. of ways: " + (dp[len][N] == Integer.MAX_VALUE-1 ? -1 : dp[len][N]));
 

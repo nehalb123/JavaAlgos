@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 518. Coin Change 2
  * For example: total=5 and k=3 ie (1 to 3), no. of ways = 5, the different ways are:
  *
  * [1+1+1+1+1]
@@ -29,7 +30,7 @@ public class WaysToSum {
         for(int i=2;i< k+1;i++){
             for(int j=1; j < total+1;j++){
                 if(j >= i){
-                    dp[i][j] = dp[i-1][j] + dp[i][j-i];
+                    dp[i][j] = dp[i-1][j] + dp[i][j-i]; //ways to sum for (k-1) elements + including this element
                 }else{
                     dp[i][j] = dp[i-1][j];
                 }

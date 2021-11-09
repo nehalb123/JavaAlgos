@@ -24,6 +24,7 @@ public class PoisonousPlants {
         LinkedList<LinkedList<Integer>> queues = new LinkedList();
         LinkedList<Integer> q = new LinkedList();
         q.add(p.get(0));
+        //create maximal non-increasing chain
         while(right < p.size()){
             //scan the array
             if(p.get(right) > p.get(right-1)){
@@ -94,7 +95,8 @@ public class PoisonousPlants {
  * pop the top element from every list (excluding the unique leftmost list). these are the plants that die on this day.
  * tuesday 6>5, 7>4, 3>1>1, -
  *
- * now check to see if any adjacent lists can be merged. here we see that 7>4 and 3>1>1 can be merged to form a longer chain. lists can be merged in O(1)
+ * now check to see if any adjacent lists can be merged. here we see that 7>4 and 3>1>1 can be merged to form a longer
+ * chain. lists can be merged in O(1)
  * tuesday 6>5, 7>4>3>1>1
  *
  * one day has now passed. repeat the process.

@@ -3,7 +3,7 @@ package com.arrays;
 
 /**
  * Rating: ⭐ ⭐ ⭐ ⭐
- * Diagram: https://imgur.com/lLeYQAN
+ * Diagram: https://imgur.com/a/7m7psN6
  */
 public class BestTimeToBuySellStocksWithCooldown {
 

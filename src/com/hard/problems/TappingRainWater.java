@@ -2,7 +2,9 @@ package com.hard.problems;
 
 import java.util.Scanner;
 
-/*https://www.youtube.com/watch?v=zdDeV5v_iUE*/
+/**
+ * https://www.youtube.com/watch?v=zdDeV5v_iUE
+ * */
 
 public class TappingRainWater {
 

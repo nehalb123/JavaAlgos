@@ -40,6 +40,7 @@ public class LongestPalindromicSubstring {
                 if(s.charAt(i) == s.charAt(i+col) && dp[i+1][i+col-1] == 1) {
                     dp[i][i + col] = 1;
                 }
+                //choosing the right most column
                 if(dp[i][i+col] == 1 && ( col+1 > R-L) ){
                     //res = s.substring(i,i+col+1);
                     L = i;

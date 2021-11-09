@@ -5,6 +5,7 @@ package com.arrays;
  * TODO: Diagram?
  */
 public class ThrottledGateway {
+
     static int dropRequests(int rt[], int n){
         int drops = 0;
         for (int i=0; i < n; i++){

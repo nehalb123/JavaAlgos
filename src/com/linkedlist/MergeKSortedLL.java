@@ -20,9 +20,9 @@ public class MergeKSortedLL {
         while(!q.isEmpty()){
             point.next = q.poll();
             point = point.next;
-            ListNode next = point.next;
-            if(next!=null){
-                q.add(next);
+            ListNode nextNode = point.next;
+            if(nextNode!=null){
+                q.add(nextNode);
             }
         }
         return head.next;

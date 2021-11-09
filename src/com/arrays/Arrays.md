@@ -8,7 +8,7 @@ EASY+:
 ### Converting a solution to DP.
 
 
-This particular problem and most of the others can be approached using the following sequence:
+This particular problem(House Robber) and most of the others can be approached using the following sequence:
 
 1.  Find recursive relation
 2.  Recursive (top-down)
@@ -32,11 +32,11 @@ Converting the recurrent relation from Step 1 shound't be very hard.
 ```
 public int rob(int[] nums) {
     return rob(nums, nums.length - 1);
-  }
+ }
 private int rob(int[] nums, int i) {
     if (i < 0) {
-    return 0;
-}
+        return 0;
+    }
     return Math.max(rob(nums, i - 2) + nums[i], rob(nums, i - 1));
 }
 ```
@@ -54,14 +54,14 @@ public int rob(int[] nums) {
 
 private int rob(int[] nums, int i) {
     if (i < 0) {
-    return 0;
-}
-if (memo[i] >= 0) {
-    return memo[i];
-}
-int result = Math.max(rob(nums, i - 2) + nums[i], rob(nums, i - 1));
-memo[i] = result;
-return result;
+        return 0;
+    }
+    if (memo[i] >= 0) {
+        return memo[i];
+    }
+    int result = Math.max(rob(nums, i - 2) + nums[i], rob(nums, i - 1));
+    memo[i] = result;
+    return result;
 }
 ```
 Much better, this should run in O(n) time. Space complexity is O(n) as well, because of the recursion stack, let's try to get rid of it.
@@ -74,8 +74,8 @@ public int rob(int[] nums) {
     memo[0] = 0;
     memo[1] = nums[0];
     for (int i = 1; i < nums.length; i++) {
-    int val = nums[i];
-    memo[i+1] = Math.max(memo[i], memo[i-1] + val);
+        int val = nums[i];
+        memo[i+1] = Math.max(memo[i], memo[i-1] + val);
     }
     return memo[nums.length];
 }

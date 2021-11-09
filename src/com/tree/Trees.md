@@ -5,7 +5,10 @@
     2.  Tree with 'n' nodes has 'n-1' edges
 
 
-1.  <b>Construct a tree from inorder and preorder:</b><br>
-    &nbsp;
+1.  <b>Construct a tree from inorder and preorder:</b><br> <br>
+    1.  Preorder gives us the root.
+    2.  Find this root in inorderMap
+    3.  Recursively repeat the process until you are 
+    left with a single node. Attach the nodes when recursion is unrolling. <br><br>
     ![Construction](https://user-images.githubusercontent.com/17683048/133401473-e725873b-8351-4a0b-a132-ce1b2ea5a485.png) 
     

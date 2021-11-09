@@ -6,7 +6,9 @@ import java.util.Queue;
 
 public class Merge2SortedLL {
 
-
+    /**
+     * If there are k such merges, we store the nodes in a heap.
+     */
     static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode curr = dummyHead;

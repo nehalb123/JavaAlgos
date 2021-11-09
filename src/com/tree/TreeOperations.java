@@ -1,22 +1,22 @@
 package com.tree;
 
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.*;
 
+/**
+ * Hints:
+ * 1. Drawing jumping arrows makes recursion simple.
+ * 2. A recursion stack is an additional visual aid.
+ * */
 public class TreeOperations {
 
-    /*Hints:
-     * 1. Drawing jumping arrows makes recursion simple.
-     * 2. A recursion stack is an additional visual aid.
-     * */
+
     static int deepestSum;
     static int maxDepth;
     static int diameter;
 
     static void inOrder(TreeNode root) {
-        /*Depth first traversals : Inorder, pre-order and post-order*/
+        /*Depth first traversals : inorder, pre-order and post-order*/
         if (root == null) {
             return;
         }
@@ -61,9 +61,9 @@ public class TreeOperations {
 
     static int heightOfTree(TreeNode node) {
         /*
-        Height of com.tree = no. of edges from longest root-to-leaf path.
-        In this example for 11 we get left side height 0 and right side height 2. We return the max(left side height, right side height) + 1 to
-        the  node above i.e. 10
+        Height of tree = no. of edges from longest root-to-leaf path.
+        In this example for 11 we get left side height 0 and right side height 2. We return the
+        max(left side height, right side height) + 1 to the  node above i.e. 10.
         */
         if (node == null) {
             return -1;
@@ -431,10 +431,14 @@ public class TreeOperations {
     }
 
     /**
-     * Find width of binary com.tree: Refer leetcode
+     * Find width of binary tree: Refer leetcode
      */
 
     /* --------------------------------------------------------------- */
+
+    /**
+     * Mirror image of the tree.
+     */
     public static TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;

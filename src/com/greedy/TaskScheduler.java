@@ -19,7 +19,7 @@ public class TaskScheduler {
         int spaces = gaps * coolDownDuration;
         //put the char in spaces virtually i.e. each chunk must get one char
         for(int i=24;i>=0;i--){
-            spaces-=Math.min(gaps, frequency[i]);
+            spaces -= Math.min(gaps, frequency[i]);
             if(spaces <=0){
                 break;
             }

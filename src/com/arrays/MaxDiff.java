@@ -1,4 +1,4 @@
-package com.interview;
+package com.arrays;
 
 public class MaxDiff {
     /**

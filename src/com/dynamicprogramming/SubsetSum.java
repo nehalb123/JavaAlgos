@@ -24,9 +24,11 @@ public class SubsetSum {
         int cols = sum + 1;
         boolean dp[][] = new boolean[rows][cols];
         dp[0][0] = true;
+        //populate first row
         for (int i = 1; i < cols; i++) {
             dp[0][i] = false;
         }
+        //populate first column
         for (int i = 1; i < rows; i++) {
             dp[i][0] = true;
         }

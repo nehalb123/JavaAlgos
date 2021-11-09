@@ -1,4 +1,4 @@
-package com.arrays;
+package com.dynamicprogramming;
 
 /**
  * Maximum Non Adjacent Sum
