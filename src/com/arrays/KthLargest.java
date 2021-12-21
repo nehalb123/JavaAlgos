@@ -11,7 +11,7 @@ import java.util.Random;
  *
  * https://imgur.com/a/bdrG4Lm
  * Approach:
- * 1.   Store in a min-heap
+ * 1.   Store in a min-heap -> O(k) + O((n-k) * log k) = O(n log k)
  * 2.   QuickSelect
  *
  * Time Complexity: O(n) avg case

@@ -14,7 +14,7 @@ public class MaxLengthConcatenationUnique {
      *  Runtime: O(2^n)
      *  Space: O(n) n stack frames deep in recursion
      * */
-    /*static int checkUnique(String s){
+    static int checkUnique(String s){
         int alphabet[] = new int[26];
         for(char ch: s.toCharArray()){
             if(alphabet[ch-'a'] >= 1){
@@ -25,7 +25,7 @@ public class MaxLengthConcatenationUnique {
         return s.length();
     }
 
-    static int maxLength(List<String> arr){
+    static int maxLength1(List<String> arr){
         int max[] = new int[1];
         findPermutations(arr,"", 0, max);
         return max[0];
@@ -41,14 +41,14 @@ public class MaxLengthConcatenationUnique {
         }
         findPermutations(arr,curr,index+1,lengthTillNow); //skip
         findPermutations(arr,curr+arr.get(index), index+1, lengthTillNow); //select  NOTE: use StringBuffer instead of String
-    }*/
+    }
 
     /**
      * Efficient solution
      * @param arr
      */
 
-    /*static int maxLength(List<String> arr) {
+    static int maxLength2(List<String> arr) {
         List<Integer> unique = new ArrayList();
         for(String s: arr){
             int binary = toBinary(s);
@@ -80,7 +80,7 @@ public class MaxLengthConcatenationUnique {
             binaryForString|=setBit;
         }
         return binaryForString;
-    }*/
+    }
 
     /**
      * a -> has encoded binary of the string

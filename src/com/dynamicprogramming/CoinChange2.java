@@ -15,7 +15,7 @@ import java.util.List;
  *
  * https://imgur.com/d3D5vz3
  */
-public class WaysToSum {
+public class CoinChange2 {
 
     static int ways(int total, int k){
 
@@ -30,7 +30,10 @@ public class WaysToSum {
         for(int i=2;i< k+1;i++){
             for(int j=1; j < total+1;j++){
                 if(j >= i){
-                    dp[i][j] = dp[i-1][j] + dp[i][j-i]; //ways to sum for (k-1) elements + including this element
+                    /*
+                    For Coin Change 2 the later part changes as, the denominations are not from 1 to k.
+                     */
+                    dp[i][j] = dp[i-1][j] + dp[i][j-i];
                 }else{
                     dp[i][j] = dp[i-1][j];
                 }

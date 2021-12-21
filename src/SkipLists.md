@@ -1,6 +1,6 @@
 ### Skip List
 
-1.  **_Sored linked lists_** with skip pointers.
+1.  **_Sorted linked lists_** with skip pointers.
 
 
 2.  A skip list is a probabilistic data structure that allows

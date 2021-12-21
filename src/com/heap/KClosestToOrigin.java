@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * Important things to note:
+ * 1. We don't store all the points in the heap. We just store 'k' points in the heap.
+ * 2. To find the minimum distance points from the origin, we use a MAX-HEAP.
+ * 3. Using QuickSelect can optimise the solution further to O(n).
+ */
 class PointData{
     int point[];
     double distance;
@@ -28,7 +34,7 @@ public class KClosestToOrigin {
             if(p1.distance>p2.distance) return -1;
             return 0;
         });
-        /*This is the same above initialisation of queue but minimized*/
+        /*This is the same above initialisation of queue*/
         //PriorityQueue<PointData> pq = new PriorityQueue<>(k, (p1, p2)->  (int)(p2.distance-p1.distance));
 
         List<PointData> pointsWithDist = new ArrayList<>(points.length);

@@ -3,7 +3,7 @@ package com.arrays;
 /**
  * Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence
  * should be adjacent in the array. So [3, 2, 7, 10] should return 13
- *
+ * Note 🔴 : This is House Robber question.
  * https://imgur.com/WJO6kwJ
  *
  * Rating: ⭐ ⭐ ⭐ ⭐ ⭐

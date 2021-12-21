@@ -69,8 +69,8 @@ public class MinimumCoinChange {
     }
 
     public static void main(String[] args) {
-        int N = 11;
-        int coins[] = {9, 6, 5, 1};
+        int N = 8;
+        int coins[] = {3 ,5};
         compute(N, coins);
         optimizedComputed(N, coins);
     }

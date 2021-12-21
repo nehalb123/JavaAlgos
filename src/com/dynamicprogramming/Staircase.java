@@ -7,6 +7,8 @@ public class Staircase {
      *
      * https://imgur.com/ZelAzMn
      *
+     * Note 🔴 : Even though this problem might look like Coin Change 2 its not.
+     *          In this Staircase problem, we take the permutations of steps into account
     */
 
     static int climbStairs(int X[], int total){
