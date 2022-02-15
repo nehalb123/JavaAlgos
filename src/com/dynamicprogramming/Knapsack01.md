@@ -16,3 +16,6 @@ less than or equal to the knapsack's capacity_**.
 
 What is 0/1? -> items cannot be broken which means we should
 take the item as a whole or should leave it.
+
+
+![image](https://user-images.githubusercontent.com/17683048/149197461-0c46edf3-da38-4f61-ba62-d84ff5463740.png)

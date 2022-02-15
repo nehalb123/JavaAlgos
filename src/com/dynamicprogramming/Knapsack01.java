@@ -10,7 +10,7 @@ import java.util.Scanner;
  * pick items from this set to maximize sum of value of items such that
  * sum of weights is less than or equal to maximum allowed weight.
  *
- * https://imgur.com/NxemNps
+ * https://imgur.com/Yc4Weg3
  */
 public class Knapsack01 {
 

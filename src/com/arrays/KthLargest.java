@@ -9,9 +9,11 @@ import java.util.Random;
  * QuickSelect was giving me 16ms runtime on LC.
  * Randomizing the array resulted in 2ms runtime.
  *
- * https://imgur.com/a/bdrG4Lm
+ * https://imgur.com/a/Bf0o539
+ *
  * Approach:
  * 1.   Store in a min-heap -> O(k) + O((n-k) * log k) = O(n log k)
+ *
  * 2.   QuickSelect
  *
  * Time Complexity: O(n) avg case

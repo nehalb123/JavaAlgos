@@ -2,6 +2,8 @@ package com.arrays;
 
 /**
  * Nearest element using binary search.
+ *
+ * tags: [Binary Search]
  */
 public class NearestElement {
 

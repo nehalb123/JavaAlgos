@@ -3,6 +3,11 @@ package com.arrays;
 /**
  * Problem Statement: https://imgur.com/T3P8Z6R
  * TODO: Diagram?
+ *
+ * Approach: As the request times are sorted in ascending order,
+ * 1. check if last 3 requests hd same time.
+ * 2. difference in time for last 20 requests can't be more than 10.
+ * 3. difference in the request time for last 60 requests can't be more than 60.
  */
 public class ThrottledGateway {
 

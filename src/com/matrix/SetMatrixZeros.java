@@ -4,8 +4,8 @@ public class SetMatrixZeros {
 
     static void setZeroes(int arr[][]) {
 
-        /*
-        * Idea: Use the first row and first column as a flag. This would determine if a row or column is set to 0.
+        /**
+        * Idea: Use the first row as a flag. This would determine if a row or column is set to 0.
         * */
         int H = arr.length;
         int W = arr[0].length;
@@ -16,6 +16,7 @@ public class SetMatrixZeros {
                 firstRowZero = true;
             }
         }
+        //set which column is 0
         for(int row = 0; row < H; row++){
             for(int col = 0; col < W; col++){
                 if(arr[row][col] == 0){
@@ -24,6 +25,7 @@ public class SetMatrixZeros {
             }
         }
 
+        //containsZero tells us that, this row has a zero
         for(int row = 1; row < H; row++){
             boolean containsZero = false;
             for(int col = 0; col< W; col++){
@@ -38,6 +40,7 @@ public class SetMatrixZeros {
                 }
             }
         }
+        //set first row to 0
         if(firstRowZero){
             for(int col=0; col < W; col++){
                 arr[0][col] = 0;
@@ -46,7 +49,7 @@ public class SetMatrixZeros {
     }
 
     public static void main(String[] args) {
-        int arr[][] = new int[][]{{1,2,3,0},{4,0,6,1},{7,8,9,4}};
+        int arr[][] = new int[][]{{0,2,3,6},{4,0,6,1},{7,8,9,4}};
         System.out.println("Before:");
         for (int i=0;i<arr.length;i++){
             for (int j=0;j<arr[i].length;j++){

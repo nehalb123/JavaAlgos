@@ -2,6 +2,8 @@ package com.matrix;
 
 /**
  * https://stackoverflow.com/questions/65510354/matrix-summation-challenge
+ *
+ * tags: [prefix-sum]
  */
 public class MatrixSummation {
 

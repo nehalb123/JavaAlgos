@@ -17,7 +17,7 @@ public class ValidParentheses {
                 return false;
             }
         }
-        return false;
+        return stack.isEmpty();
     }
 
     public static void main(String[] args) {

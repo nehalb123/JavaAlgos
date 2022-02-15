@@ -1,4 +1,4 @@
-package com.interview;
+package com.bit;
 
 public class PowerOf4 {
 
@@ -14,21 +14,28 @@ public class PowerOf4 {
         return true;
     }
 
-
     static boolean bitPowerOf4(int num){
         /*
         Approach 2:
-        1. n & (n-1)  There is only one bit set in the binary representation of n (else n is a power of 2):
-           Consider the case of 20..we have to remove this case.
+        1. n & (n-1) = 0 => for, n = power of 2
            Subtracting 1 from a decimal number flips all the bits after the rightmost set bit(which is 1) including the rightmost set bit.
         2. The bits don’t AND(&) any part of the pattern 0xAAAAAAAA
-           Why 0xAAAAAAAA ? This is because the bit representation is of powers of 2 that are not of 4. Like 2, 8, 32 so on..
-           For example: 16 (10000) is power of 4 because there is only one bit set and 0x10 & 0xAAAAAAAA is zero.
+           Why 0xAAAAAAAA ? For powers of 4 only odd number of bits are set.
+
         */
         int bitMask = 0xAAAAAAAA;
         return num!=0 && ((num & num-1) == 0) && (num & bitMask)==0;
     }
 
+    static boolean bitPowerOf4Another(int num){
+        /*
+        Approach 2:
+        1. n & (n-1) = 0 => for, n = power of 2
+           Subtracting 1 from a decimal number flips all the bits after the rightmost set bit(which is 1) including the rightmost set bit.
+        2. n % 3 == 1, For n = power of 4.
+        */
+        return num!=0 && ((num & num-1) == 0) && (num % 3)==1;
+    }
 
     public static void main(String[] args) {
         int numberToCheck = 20;
@@ -36,5 +43,4 @@ public class PowerOf4 {
         boolean bitPowerOfFour  = bitPowerOf4(numberToCheck);
         System.out.println(bitPowerOfFour);
     }
-
 }

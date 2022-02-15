@@ -3,6 +3,14 @@ package com.string;
 import java.util.HashMap;
 import java.util.HashSet;
 
+
+/**
+ * Approach 1: Brute force
+ * 1. Generate all substrings.
+ * 2. For each substring, check if a character is repeated.
+ *
+ *  Approach 2: Sliding window. similar to `Minimum Window substring`
+ */
 public class LongestSubstringWithoutRepeatingCharacters {
 
     /**

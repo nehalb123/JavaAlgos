@@ -2,7 +2,7 @@
     Long ~ 9 * 10<sup>18</sup>
 
 
-2.  A common mistake when using the type long long is that the type
+2.  A common mistake when using the type long is that the type
     int is still used somewhere in the code.
     ```
     int a = 123456789;
@@ -38,14 +38,14 @@
 
 5.  For Arrays questions:
     1. Visualize using continuous histogram
-    2. Use index as implicit counter
+    2. Use index as implicit counter (Throttling Gateway)
 
 
 6.  When a sorted array is given things that must come to mind:
     1. Binary Search
     2. Two pointer technique -> Three Sum, Container with most water.
 
-    Consider using max & min functions.
+        Consider using max & min functions.
 
 
 
