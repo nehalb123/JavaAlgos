@@ -4,6 +4,8 @@ package com.arrays;
 /**
  * Rating: ⭐ ⭐ ⭐ ⭐
  * Diagram: https://imgur.com/a/7m7psN6
+ *
+ * Refer to .md file in the pkg dynamic programming
  */
 public class BestTimeToBuySellStocksWithCooldown {
 

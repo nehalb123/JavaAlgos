@@ -50,4 +50,9 @@
 
 
 Best Trick:
+
+Step 1: **Read** & **Understand** the question thoroughly.<br>
+Step 2: **DO NOT** jump to coding, create test cases and corner cases.<br>
+Step 3: Now try to solve the problem and apply methods learnt.
+
 Meditate before the interview. :)

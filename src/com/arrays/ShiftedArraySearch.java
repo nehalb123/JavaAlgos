@@ -28,7 +28,9 @@ public class ShiftedArraySearch {
     static int shiftedArraySearch(int arr[], int num){
         int pivot = findPivot(arr);
         if(arr[0] > num || pivot == 0)
-            return binarySearch(arr,pivot,arr.length-1,num);
+            //left half
+            return binarySearch(arr, pivot,arr.length-1,num);
+        //right half
         return binarySearch(arr,0,pivot-1,num);
     }
 

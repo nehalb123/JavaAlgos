@@ -40,4 +40,5 @@ public class ListNode {
         linkedListAsString.append(']');
         return linkedListAsString.toString();
     }
+
 }

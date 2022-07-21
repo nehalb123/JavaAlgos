@@ -1,7 +1,8 @@
-### Converting a solution to DP.
+### Converting a solution to DP. 
+### Problem: House Robber
 
 
-This particular problem(House Robber) and most of the others can be approached using the following sequence:
+This particular problem([House Robber](./HouseRobber.java)) and most of the others can be approached using the following sequence:
 
 1.  Find recursive relation
 2.  Recursive (top-down)

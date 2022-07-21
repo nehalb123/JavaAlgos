@@ -1,15 +1,14 @@
-### Approach to the stock buy and sell questions from Leetcode
+### Approach to the  stock buy and sell questions from Leetcode
 
 
-![image](https://user-images.githubusercontent.com/17683048/150692683-cb3b1e9c-6175-44c5-8d0e-8c39c6ac10c1.png)
-![image](https://user-images.githubusercontent.com/17683048/150692700-6e1fef90-f08b-4e60-9637-123389cff39c.png)
-![image](https://user-images.githubusercontent.com/17683048/150692731-53cfe3bb-b702-4594-addb-d37f7a3d7577.png)
-![image](https://user-images.githubusercontent.com/17683048/150692753-b480caa9-c649-4ddf-98cb-ff5d8dee0b3c.png)
-![image](https://user-images.githubusercontent.com/17683048/150692765-a7778723-ab27-45ba-94e8-0efc1fbea99d.png)
-![image](https://user-images.githubusercontent.com/17683048/150692785-26251c86-bf0b-4b41-9cd0-bbe0de997c5a.png)
-![image](https://user-images.githubusercontent.com/17683048/150692820-3a5406d6-522c-4bb5-9c4d-a5a00048a1fe.png)
-![image](https://user-images.githubusercontent.com/17683048/150692833-bf708fc5-7897-44f4-a951-4610cfa71c53.png)
-![image](https://user-images.githubusercontent.com/17683048/150692849-a64954fa-c0b5-47bf-915c-df716792f8f5.png)
-![image](https://user-images.githubusercontent.com/17683048/150692862-8eeed163-4e87-4400-81c1-abdd6e381283.png)
-![image](https://user-images.githubusercontent.com/17683048/150692879-07175d6d-f8c1-46d4-8aad-5e8af0ed0b94.png)
-![image](https://user-images.githubusercontent.com/17683048/150692884-2afe5a2d-8cfe-4629-bdc4-5abd333ee97c.png)
+![image](https://user-images.githubusercontent.com/17683048/154124298-ae3874d0-bdd1-4404-93fb-0ba78f779492.png)
+![image](https://user-images.githubusercontent.com/17683048/154124347-b793f443-9203-4a27-9104-dea19bbc60b0.png)
+![image](https://user-images.githubusercontent.com/17683048/154124656-19fc755b-db63-40eb-baff-ddc869327699.png)
+![image](https://user-images.githubusercontent.com/17683048/154124712-1360304f-4050-4433-b18c-a3aa60083194.png)
+![image](https://user-images.githubusercontent.com/17683048/154124753-3f2686c3-bee7-42e3-8a8e-855c7efe73b6.png)
+![image](https://user-images.githubusercontent.com/17683048/154124816-d6cb0925-830c-4ce9-92ff-1049e80557d2.png)
+![image](https://user-images.githubusercontent.com/17683048/154124863-460617f1-c387-4138-84fc-68590679f53a.png)
+![image](https://user-images.githubusercontent.com/17683048/154125038-a6b8f1a3-a097-4881-bd64-e4c7f6d29d18.png)
+![image](https://user-images.githubusercontent.com/17683048/154125072-b267f13b-f841-4da3-89f9-cae026c5d405.png)
+![image](https://user-images.githubusercontent.com/17683048/154125194-f5ae8501-8fb7-4559-b3e5-add48057e280.png)
+![image](https://user-images.githubusercontent.com/17683048/154125246-4cad1056-1b39-4ece-97be-87d3480a4d5f.png)

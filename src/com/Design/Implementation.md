@@ -1,3 +1,7 @@
+### Implementation
+
+* [Implement a Priority Queue](../PriorityQueue.md)
+
 1. **Design LRU Cache - LeetCode** <br>
    
    LRU - Cache Eviction Policy<br>
@@ -54,10 +58,10 @@
   Problem: _Given the common fixed-size buffer, the task is to make sure that the producer can’t add data into the buffer
   when it is full and the consumer can’t remove data from an empty buffer._
    1. Manage shared memory access.
-   2. Checking if buffer is full
+   2. Checking if buffer is full.
    3. Checking if buffer is empty.
    
-
+    
 
 6. **Queue using two stacks** 
     

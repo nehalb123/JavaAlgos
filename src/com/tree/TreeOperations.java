@@ -417,17 +417,22 @@ public class TreeOperations {
                   7 [2,1,7,0,7]
      */
 
-    static void rootToLeafPaths(TreeNode node, ArrayList path) {
+    static void rootToLeafPaths(TreeNode root){
+        ArrayList path = new ArrayList();
+        dfs(root, path);
+    }
+
+    static void dfs(TreeNode node, ArrayList path) {
         if (node == null)
             return;
         path.add(node.data);
-        if (node.left == null && node.right == null) {  //leaf node found
+        //leaf node found
+        if (node.left == null && node.right == null) {
             System.out.println(path);
             return;
         }
-        rootToLeafPaths(node.left, new ArrayList(path));
-        rootToLeafPaths(node.right, new ArrayList(path));
-
+        dfs(node.left, new ArrayList(path));
+        dfs(node.right, new ArrayList(path));
     }
 
     /**
@@ -523,9 +528,9 @@ public class TreeOperations {
         System.out.println("Reverse level order traversal: ");
         reverseLevelOrderTraversal(root);
         System.out.println('\n' + "Diameter of tree: " + diameterOfBinaryTree(root));
-        ArrayList path = new ArrayList();
+
         System.out.println("Root to leaf paths: ");
-        rootToLeafPaths(root, path);
+        rootToLeafPaths(root);
 
         invertTree(root);
 

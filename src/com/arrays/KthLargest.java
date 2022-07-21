@@ -28,6 +28,9 @@ public class KthLargest {
         arr[j] = temp;
     }
 
+    /**
+    why this weird logic? -> simply encountering a bigger number than pivot and swapping the two won't work!
+     */
     static int partition(int arr[], int start, int end){
         int pivot = arr[end];
         int pIndex = start;

@@ -9,8 +9,6 @@ import java.util.List;
  *  1. Sort the array - makes two pointers approach easy.
  *  2. Find pairs such that b+c = (-a)
  *  3. Avoid duplicates
- *
- *  TODO: Diagram?
  */
 public class ThreeSum {
 
@@ -19,8 +17,9 @@ public class ThreeSum {
         int n = nums.length;
         List<List<Integer>> output = new ArrayList<>();
         for(int i=0; i < n-2; i++){
-            //Avoid duplicates
-            if(i == 0 || i > 0 && (nums[i] != nums[i-1])){
+            /*removing i==0 fails this case [0,0,0], basically we need to allow duplicates if it's the first element in
+            array*/
+            if(i == 0 || i > 0 && (nums[i] != nums[i-1])){  //Avoid duplicates
                 int left = i+1;
                 int right = n-1;
                 int sum = 0-nums[i];
@@ -38,7 +37,6 @@ public class ThreeSum {
                     }
                 }
             }
-
         }
         return output;
     }

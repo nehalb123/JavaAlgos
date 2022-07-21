@@ -1,4 +1,4 @@
-package com;
+package com.Design;
 
 public class TokenBucketAlgorithm {
 
@@ -7,6 +7,7 @@ public class TokenBucketAlgorithm {
     private long lastRefillTimestamp;
     private double currentSize;
 
+    //constructor
     TokenBucketAlgorithm(long maxBucketSize, long refillRate){
         this.maxBucketSize = maxBucketSize;
         this.refillRate = refillRate;

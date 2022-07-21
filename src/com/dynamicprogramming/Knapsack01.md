@@ -6,6 +6,27 @@
     
 3.  Unbounded Knapsack (DP) - Coin Change, Rod Cutting
 
+### Fractional Knapsack
+
+* Calculate the ratio(value/weight) for each item.
+* Sort all the items in decreasing order of the ratio.
+
+```
+
+- store ratios in a list i.e. items
+- sort it 
+
+for item in items:
+    if capacity >= item.wt:
+        capacity -= item.wt
+        totalValue = item.value
+    else:
+        totalValue = capacity*ratio
+        break
+
+return totalValue
+```
+
 ### 0/1 Knapsack
 
 **Problem Statement:** Given a set of n items numbered from 1 up
@@ -18,4 +39,4 @@ What is 0/1? -> items cannot be broken which means we should
 take the item as a whole or should leave it.
 
 
-![image](https://user-images.githubusercontent.com/17683048/149197461-0c46edf3-da38-4f61-ba62-d84ff5463740.png)
+![image](https://user-images.githubusercontent.com/17683048/158238054-76d92e64-c9b5-4912-a347-81ec88f9a4b7.png)

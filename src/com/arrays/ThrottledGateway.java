@@ -16,10 +16,13 @@ public class ThrottledGateway {
         for (int i=0; i < n; i++){
             if(i >= 3 && rt[i] == rt[i-3]){
                 drops++;
+                System.out.println("Dropped: "+ (i+1) + " no. request");
             } else if( i >= 20 && rt[i] - rt[i-20] < 10){  /** if count exceeds 20 && requestTime is within the 10 sec duration **/
                 drops++;
+                System.out.println("Dropped: "+ (i+1) + " no. request");
             } else if( i >= 60 && rt[i] - rt[i-60] < 60){   /** if count exceeds 60 && requestTime is within the 60 sec duration **/
                 drops++;
+                System.out.println("Dropped: "+ (i+1) + " no. request");
             }
         }
         return drops;

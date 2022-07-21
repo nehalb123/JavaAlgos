@@ -4,15 +4,20 @@ import java.util.Arrays;
 
 public class MinHeap {
     /**
-     * Implementation of Heap:
+     * Implementation of Heap/Priority Queue:
+     *
      * https://imgur.com/LPl4kwi
      * https://imgur.com/lO9uX7i
+     *
      * Time analysis to build a heap: https://imgur.com/GvgEXeI
      */
     private int capacity = 10;
     private int size = 0;
     int items[] = new int[capacity];
 
+    /**
+     * Helper methods
+     */
     private int getLeftChildIndex(int parentIndex){
         return 2*parentIndex+1;
     }
@@ -53,6 +58,7 @@ public class MinHeap {
     public int poll(){
         /**
          * Notice we place the last element at the top and heapify it. This is done to avoid any gaps in the heap.
+         * Heap does not have any gaps hence we can use array to store the nodes and get parent/child efficiently.
          */
         if(size == 0){
             throw new IllegalStateException();
@@ -64,6 +70,10 @@ public class MinHeap {
         return item;
     }
 
+    /**
+     * Iterated insertion
+     * @param item
+     */
     public void add(int item){
         ensureExtraCapacity();
         items[size] = item;

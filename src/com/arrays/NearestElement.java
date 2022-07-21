@@ -1,14 +1,13 @@
 package com.arrays;
 
 /**
- * Nearest element using binary search.
+ * Nearest element using binary search from a sorted array.
  *
  * tags: [Binary Search]
  */
 public class NearestElement {
 
     public static int search(int value, int[] a) {
-
         if(value < a[0]) {
             return a[0];
         }
@@ -32,5 +31,12 @@ public class NearestElement {
         }
         // lo == hi + 1
         return (a[lo] - value) < (value - a[hi]) ? a[lo] : a[hi];
+    }
+
+    public static void main(String[] args) {
+        int nums[] = {2, 5, 6, 7, 8, 8, 100};
+        int value = 88;
+        int result = search(value, nums);
+        System.out.println("Nearest element is: "+ result);
     }
 }

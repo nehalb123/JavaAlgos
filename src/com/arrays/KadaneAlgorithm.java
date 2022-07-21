@@ -5,6 +5,7 @@ public class KadaneAlgorithm {
      * Rating ⭐ ⭐ ⭐ ⭐
      * Given an array of integers, find the maximum possible sum you can get from one
      * of it's contiguous sub-arrays.
+     * i.e. Max Subarray Sum
      */
 
     static int maxSubArraySum(int[] arr){

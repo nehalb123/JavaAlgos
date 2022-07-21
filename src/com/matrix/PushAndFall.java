@@ -12,12 +12,18 @@ public class PushAndFall {
     }
 
     static void pushAndFall(char matrix[][]) {
+
         int rows = matrix.length;
         int cols = matrix[0].length;
         //int down = cols-1;
+        print(matrix, rows, cols);
+
         for (int i = 0; i < rows; i++) {
-            int down = cols - 1;
-            for (int j = cols - 1; j >= 0; j--) {  //start looking from last column
+            int down = cols - 1;  //stores the spot of empty spot from right
+            for (int j = cols - 1; j >= 0; j--) {  //start looking from last column as this will avoid '*'
+                /* if empty spot '.' is found, do not update the pointer
+                    if a box '#' is found, store it at col = down
+                 */
                 if (matrix[i][j] == '#') {
                     matrix[i][j] = '.';
                     matrix[i][down] = '#';
@@ -57,7 +63,7 @@ public class PushAndFall {
     }
 
     public static void main(String[] args) {
-        char matrix[][] = {{'#','.','*','#','.'},{'.','.','.','.','.'},{'#','.','#','#','.'},{'#','.','.','.','#'}};
+        char matrix[][] = {{'#','.','*','#','.'},{'.','.','.','.','.'},{'#','.','#','#','.'},{'#','.','.','*','#'}};
         pushAndFall(matrix);
     }
 }

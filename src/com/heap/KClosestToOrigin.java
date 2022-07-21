@@ -27,7 +27,7 @@ class PointData{
 
 public class KClosestToOrigin {
 
-    private int[][] kClosest(int points[][], int k){
+    private static int[][] kClosest(int points[][], int k){
         /*Create a max heap*/
         PriorityQueue<PointData> pq = new PriorityQueue<>(k, (p1, p2)->{
             if(p1.distance<p2.distance) return 1;
@@ -62,17 +62,16 @@ public class KClosestToOrigin {
         return result;
     }
 
-    private double getDistance(int[] p){
+    private static double getDistance(int[] p){
         return Math.sqrt(p[0]*p[0] + p[1]*p[1]);
     }
 
 
 
     public static void main(String[] args) {
-        KClosestToOrigin kObj = new KClosestToOrigin();
-        int points[][] = {{-2,4},{0,-2},{-1,0},{3,5},{-2,-3},{3,2}};
+        int points[][] = {{-2,4},{0,-2},{-1,0},{3,5},{3,2},{-2,-3}};
         int k = 3;
-        int closestKPoints[][] = kObj.kClosest(points,k);
+        int closestKPoints[][] = kClosest(points,k);
         for(int i=0;i<closestKPoints.length;i++){
             for(int j=0;j<2;j++){
                 System.out.print(closestKPoints[i][j]+" ");
