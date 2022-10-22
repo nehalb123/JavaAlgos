@@ -9,6 +9,11 @@ public class Subsets {
      * Hint: Draw the tree to understand the solution
      *
      * https://imgur.com/41X3KpP
+     *
+     * Time Complexity: O(n * 2^n)
+     * Space Complexity: O(n)
+     *
+     * Also refer,{@link com.bit.Subsets}
      */
     static List<List<Integer>> subsets = new ArrayList<>();
 

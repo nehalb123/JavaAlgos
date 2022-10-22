@@ -1,6 +1,6 @@
 ### Approach to the  stock buy and sell questions from Leetcode
 
-
+[ Best Time to Buy and Sell Stock](../arrays/BestTimeToBuySellStocks.java)
 ![image](https://user-images.githubusercontent.com/17683048/154124298-ae3874d0-bdd1-4404-93fb-0ba78f779492.png)
 ![image](https://user-images.githubusercontent.com/17683048/154124347-b793f443-9203-4a27-9104-dea19bbc60b0.png)
 ![image](https://user-images.githubusercontent.com/17683048/154124656-19fc755b-db63-40eb-baff-ddc869327699.png)

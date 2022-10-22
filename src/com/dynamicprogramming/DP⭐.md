@@ -1,6 +1,10 @@
 ### Converting a solution to DP. 
-### Problem: House Robber
 
+⭐⭐⭐ [Knapsack problem: All solutions: code here](../backtracking/Knapsack01.java)
+
+[Recursive -> Memoization -> Tabulated](./BestTimeToBuySellStocksIII.md)
+
+### Problem: House Robber
 
 This particular problem([House Robber](./HouseRobber.java)) and most of the others can be approached using the following sequence:
 

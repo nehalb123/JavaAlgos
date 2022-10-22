@@ -10,7 +10,7 @@
 5. Three Sum(👍👍) -> Best for pointers manipulation
 6. Koko Eating Bananas(👍👍) -> Best for binary search
 7. 132 Pattern(👍👍) -> Pointer manipulation O(n<sup>2</sup>), Mono Stack O(n)  (Watch LC solution video)
-
+8. [Best time to buy sell stocks](../dynamicprogramming/StockBuySellQuestions.md)
 
 ### Math for array questions
 

@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Returns subsets with given sum
+ */
 public class SubsetSumBT {
 
     static List<List<Integer>> subset = new ArrayList<>();
@@ -25,12 +28,12 @@ public class SubsetSumBT {
 
     static void subsetSum(int[] arr) {
         List<Integer> res = new ArrayList<>();
-        backtrack(arr, 0, 5, res);
+        backtrack(arr, 0, 6, res);
         System.out.println(subset);
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, 3, 2, 4};
+        int arr[] = {2, 3, 2, 4, 1};
         List<Integer> set = Arrays.stream(arr).boxed().collect(Collectors.toList());
         subsetSum(arr);
     }

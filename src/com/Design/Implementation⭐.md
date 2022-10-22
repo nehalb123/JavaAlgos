@@ -90,3 +90,58 @@
    
    ![image](https://user-images.githubusercontent.com/17683048/154005261-aa74205e-9679-4994-98c3-88170ca25a9c.png)
    ![image](https://user-images.githubusercontent.com/17683048/154005306-bc0bcfd6-1ea4-4812-9f12-0611ab303f3d.png)
+   
+
+9. **Rate-Limiting**
+
+    * [Token Bucket algorithm](./TokenBucketAlgorithm.java)
+    * [Sliding Window](../arrays/ThrottledGateway.java)
+    * Timer Wheel
+
+
+10. Logging Library
+
+    * Since logging library is used at multiple places, it becomes performance overhead if new instance has to be created every time. `Singleton` is a good option.
+    
+    * Application code should only be responsible to push the log messages. Handling log messages should be decoupled from the application. `Observer` pattern which is similar to pub-sub model can be used.
+   
+```
+public class Logger extends Subject {
+
+    private LogLevel currentLogLevel;
+
+    public Logger() {
+        super();
+
+    }
+
+    public void log(LogLevel logLevel, String namespace, String message) {
+        if(isLevelEnabled(logLevel)) {
+            setData(message);
+            notify(logLevel); 📨 /*notify subscribers*/
+        }
+    }
+
+    protected boolean isLevelEnabled(LogLevel logLevel) {
+        return (logLevel.getValue() >= currentLogLevel.getValue());
+    }
+
+    public void setLevel(LogLevel logLevel) {
+        currentLogLevel = logLevel;
+    }
+}
+```
+
+Subscribers are different appenders like FileAppender, JDBCAppender, JMSAppender. 
+ 
+11. [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+
+    * Use `Map<String, List<Node>> map` and then binary search on the list to get the required node.
+    * or `Map<String, TreeMap<Integer, String>> map` 
+
+12. Design a File System
+
+    
+
+
+

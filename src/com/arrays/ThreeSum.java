@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  *  Find triplets such that a+b+c = 0.
+ *
  *  1. Sort the array - makes two pointers approach easy.
  *  2. Find pairs such that b+c = (-a)
  *  3. Avoid duplicates

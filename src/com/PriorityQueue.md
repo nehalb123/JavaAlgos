@@ -50,4 +50,4 @@ Notice that both BSTs and Heaps can perform the operations in similar time.
 
 2. Linear Build Heap Operation
     <br>  
-    <img width="401" alt="image" src="https://user-images.githubusercontent.com/17683048/179423883-216bf914-a9c2-49a0-a082-11e715dc0a4d.png">
+    <img alt="image" src="https://user-images.githubusercontent.com/17683048/179423883-216bf914-a9c2-49a0-a082-11e715dc0a4d.png">
