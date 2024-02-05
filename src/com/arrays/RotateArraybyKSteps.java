@@ -2,7 +2,9 @@ package com.arrays;
 
 import java.util.Arrays;
 
-
+/**
+ * Right Rotate an array by 'k' steps. This code has a .md file
+ */
 public class RotateArraybyKSteps {
 
     static void reverse(int nums[], int start, int end){

@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class DFSGraph {
+
     static class Node{
         int id;
         LinkedList<Node> adjacent = new LinkedList<>();

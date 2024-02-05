@@ -20,7 +20,7 @@
 				<th>delete</th>
 			</tr><tr><td>Linked List</td>
 				<td><code>O(1)</code></td>
-				<td><code>O(n)</code></td>
+				<td><code>O(1)</code></td>
 				<td><code>O(1)</code></td>
 			</tr><tr><td>Binary Heap</td>
 				<td><code>O(1)</code></td>
@@ -45,9 +45,10 @@ Notice that both BSTs and Heaps can perform the operations in similar time.
 
 ### Building a Heap
 
-1. Iterated insertion will take: `O(n logn)` time.
+1. **Iterated insertion** will take: `O(n logn)` time. As the heap gets bigger, elements are inserted deeper down and in the worst it would take `O(n logn)`
 
 
 2. Linear Build Heap Operation
-    <br>  
-    <img alt="image" src="https://user-images.githubusercontent.com/17683048/179423883-216bf914-a9c2-49a0-a082-11e715dc0a4d.png">
+    <br>   
+   - any node with no chlidren look like a valid heap.
+     <img width="600" alt="image" src="https://user-images.githubusercontent.com/17683048/200663352-149a98e8-d8a0-4cdc-b4a0-a2fd6cb318a6.png">

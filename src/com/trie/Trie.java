@@ -76,7 +76,8 @@ public class Trie {
         Trie trie = new Trie();
         stringList.forEach(trie::insert);
 
-        System.out.println(trie.query("qqrs"));
+        trie.delete("pqrs");
+        System.out.println(trie.query("pqrs"));
         System.out.println(trie.query("psst"));
         trie.update("qqrs","psst");
         System.out.println(trie.query("qqrs"));

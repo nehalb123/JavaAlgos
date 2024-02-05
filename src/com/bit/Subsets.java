@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * If we refer to {@link com.backtracking.Subsets}, this solution has no stack space.
+ * In contrast to {@link com.backtracking.Subsets}, this solution has no stack space.
  * Hence,
  * Time Complexity: O(n * 2^n)
  * Space Complexity: O(1)

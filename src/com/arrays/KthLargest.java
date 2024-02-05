@@ -39,8 +39,8 @@ public class KthLargest {
                 swap(arr,i,pIndex);
                 pIndex++;
             }
-            //pIndex points to a number larger than pivot
         }
+        //pIndex points to a number larger than pivot
         swap(arr,pIndex,end);
         return pIndex;
     }

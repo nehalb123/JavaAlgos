@@ -38,7 +38,8 @@ private int rob(int[] nums, int i) {
     return Math.max(rob(nums, i - 2) + nums[i], rob(nums, i - 1));
 }
 ```
-This algorithm will process the same i multiple times, and it needs improvement. Time complexity: [to fill]
+This algorithm will process the same i multiple times, and it needs improvement. Time complexity: `O(2^n)`
+Space complexity: `O(n)` because of recursion stack space of size n
 
 **Step 3.** Recursive + memo (top-down).
 
@@ -62,7 +63,7 @@ private int rob(int[] nums, int i) {
     return result;
 }
 ```
-Much better, this should run in O(n) time. Space complexity is O(n) as well, because of the recursion stack, let's try to get rid of it.
+Much better, this should run in O(n) time. Space complexity is O(n), because of memo[] array + O(n), because of the recursion stack, let's try to get rid of it.
 
 **Step 4.** Iterative + memo (bottom-up)
 ```
